@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <header className="bg-pink-200 fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center">
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
-        <Link to={"/"}>
-          <img src={Logo} alt="" />
+        <Link to={"/"} className="max-w-[90px] ">
+          <img src={Logo} alt="portfolio-logo" className="w-full" />
         </Link>
         <nav className="hidden lg:flex gap-x-12 font-semibold">
           <Link
@@ -20,42 +20,44 @@ const Header = () => {
             Home
           </Link>
           <Link
-            to={"/"}
+            to={"/about"}
             className="text-[#696c6d] hover:text-primary transition"
           >
             About
           </Link>
           <Link
-            to={"/"}
+            to={"/services"}
             className="text-[#696c6d] hover:text-primary transition"
           >
             Services
           </Link>
           <Link
-            to={"/"}
+            to={"/portfolio"}
             className="text-[#696c6d] hover:text-primary transition"
           >
             Portfolio
           </Link>
           <Link
-            to={"/"}
+            to={"/testimonials"}
             className="text-[#696c6d] hover:text-primary transition"
           >
             Testimonials
           </Link>
           <Link
-            to={"/"}
+            to={"/blog"}
             className="text-[#696c6d] hover:text-primary transition"
           >
             Blog
           </Link>
           <Link
-            to={"/"}
+            to={"/contact"}
             className="text-[#696c6d] hover:text-primary transition"
           >
             Contact
           </Link>
         </nav>
+        <Socials />
+        <MobileNav />
       </div>
     </header>
   );
