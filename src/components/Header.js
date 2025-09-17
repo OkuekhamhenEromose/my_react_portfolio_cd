@@ -9,7 +9,7 @@ const Header = () => {
     <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[80px] flex items-center">
       <div className="flex flex-row items-center justify-between w-full">
         {/* Logo */}
-        <Link to={"/"} className="max-w-[90px] mt-6">
+        <Link to={"/"} className="max-w-[60px] mt-4">
           <img src={Logo} alt="portfolio-logo" className="w-full" />
         </Link>
 
@@ -29,9 +29,6 @@ const Header = () => {
           </Link>
           <Link to="/testimonials" className="text-[#696c6d] hover:text-primary transition">
             Testimonials
-          </Link>
-          <Link to="/blog" className="text-[#696c6d] hover:text-primary transition">
-            Blog
           </Link>
           <Link to="/contact" className="text-[#696c6d] hover:text-primary transition">
             Contact

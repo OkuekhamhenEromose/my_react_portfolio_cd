@@ -70,7 +70,6 @@ const MobileNav = () => {
           <li><Link to="/services" onClick={() => setOpenMenu(false)}>Services</Link></li>
           <li><Link to="/portfolio" onClick={() => setOpenMenu(false)}>Portfolio</Link></li>
           <li><Link to="/testimonials" onClick={() => setOpenMenu(false)}>Testimonials</Link></li>
-          <li><Link to="/blog" onClick={() => setOpenMenu(false)}>Blog</Link></li>
           <li><Link to="/contact" onClick={() => setOpenMenu(false)}>Contact</Link></li>
         </ul>
       </motion.div>

@@ -6,13 +6,31 @@
   body {
     @apply text-primary font-secondary bg-white;
   }
+
   .h1 {
     @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
   }
+
   .section {
-    @apply h-screen w-screen;
+    @apply min-h-screen w-screen flex items-center;
   }
+
   .btn {
     @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
   }
+}
+
+/* 🔹 Infinite scrolling animation for skills section */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slideLeft {
+  animation: slideLeft 30s linear infinite; /* balanced speed */
+  width: max-content;
 }
