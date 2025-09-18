@@ -23,60 +23,72 @@ const Home = () => {
   return (
     <motion.section
       id="home"
-      className="section bg-gray-50 flex items-center"
+      className="section bg-[#f5f7fa] flex items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
     >
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 lg:px-12 h-full gap-10">
-        
-        {/* 🔹 Left Side - Text + Code */}
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-3 sm:px-4 lg:px-8 h-full">
+        {/* 🔹 Left Side - Text + Code - Adjusted downward */}
         <motion.div
-          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left justify-start"
+          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left justify-center mt-10 lg:mt-20"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
           {/* Intro heading */}
           <motion.p
-            className="text-base sm:text-lg text-gray-600 font-semibold tracking-wider"
+            className="text-base sm:text-lg text-gray-800 font-semibold tracking-wider"
             variants={fadeInUp}
           >
-            THIS IS ME
+            Hello There!
           </motion.p>
 
-          {/* Name */}
+          {/* Name and role */}
           <motion.h1
-            className="whitespace-nowrap text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-3 sm:mb-4 lg:mb-5 leading-tight"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-2 sm:mb-3 lg:mb-4 leading-tight whitespace-nowrap"
             variants={fadeInUp}
           >
-            CHARLES EROMOSE
+            I'm <span className="text-[#003366]">Charles Eromose</span>,
           </motion.h1>
 
-          {/* Code block */}
-          <motion.div className="w-full" variants={fadeInUp}>
+          {/* Code block - Larger size and wider */}
+          <motion.div
+            className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl"
+            variants={fadeInUp}
+          >
             <div className="code-display">
               <SyntaxHighlighter
                 language="typescript"
                 customStyle={{
                   margin: 0,
-                  padding: "1.5rem",
-                  borderRadius: "20px",
-                  background: "rgba(30, 41, 59, 0.9)",
+                  borderRadius: "16px",
+                  background: "rgba(30, 41, 59, 0.95)",
                   backdropFilter: "blur(10px)",
+                  fontSize: "0.875rem",
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+                  overflow: "visible",
+                  whiteSpace: "pre",
                 }}
                 style={vscDarkPlus}
+                wrapLines={false}
+                showLineNumbers={false}
               >
-{`const aboutMe: DeveloperProfile = {
+                {`const aboutMe: DeveloperProfile = {
   name: "Charles Eromose",
-  role: "Full Stack Engineer",
-  experience: "3+ years",
+  role: "Full Stack Engineer", 
+  experience: "4+ years",
   stack: {
-    frontend: ["React", "TailwindCSS"],
-    backend: ["Django", "Node.js"],
-    cloud: ["AWS"]
+    frontend: ["React.js", "TailwindCSS", "Next.js", "TypeScript"],
+    backend: ["Django", "Node.js", "Python"],
+    database: ["PostgreSQL", "MySQL", "SQL Server"],
+    cloud: ["AWS", "Vercel", "Netlify"]
   },
-  skills: ["UI design", "API development", "cloud solutions"],
+  skills: [
+    "UI/UX design", 
+    "API development", 
+    "cloud solutions"
+  ],
   availability: "Open to opportunities 🚀"
 };`}
               </SyntaxHighlighter>
@@ -85,19 +97,36 @@ const Home = () => {
 
           {/* Hire Me button */}
           <motion.div
-            className="mt-6 flex justify-center lg:justify-start"
-            variants={fadeInUp}
+            className="mt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            variants={staggerContainer}
           >
-            <Link
-              to={"/contact"}
-              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm md:text-base"
+            <motion.a
+              href="#projects"
+              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-[0_15px_0_15px] hover:bg-blue-700 transition-colors duration-300 text-sm md:text-base"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              HIRE ME
-            </Link>
-          </motion.div>
-        </motion.div>
+              Hire Me Today
+            </motion.a>
+            <motion.a
+  href="/cv"
+  className="relative inline-block px-6 py-3 font-medium group overflow-hidden rounded-[0_15px_0_15px] border border-blue-600 text-blue-600 transition-colors duration-300 text-sm md:text-base"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  {/* Expanding background - Fixed */}
+  <span className="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 ease-linear group-hover:w-full"></span>
 
-        {/* 🔹 Right Side - Hero Image */}
+  {/* Button text */}
+  <span className="relative z-10 group-hover:text-white">
+    Download CV
+  </span>
+</motion.a>
+          </motion.div>
+
+          {/* 🔹 Right Side - Hero Image */}
+        </motion.div>{" "}
+        {/* <-- Add this closing tag for the motion.div started at line 34 */}
         <motion.div
           className="w-full lg:w-1/2 flex justify-center lg:justify-end"
           initial={{ opacity: 0, x: 50 }}

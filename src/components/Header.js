@@ -13,30 +13,58 @@ const Header = () => {
           <img src={Logo} alt="portfolio-logo" className="w-full" />
         </Link>
 
-        {/* Nav links: show from md (≈768px) upward */}
-        <nav className="hidden md:flex gap-x-8 font-semibold">
-          <Link to="/" className="text-[#696c6d] hover:text-primary transition">
-            Home
-          </Link>
-          <Link to="/about" className="text-[#696c6d] hover:text-primary transition">
-            About
-          </Link>
-          <Link to="/services" className="text-[#696c6d] hover:text-primary transition">
-            Services
-          </Link>
-          <Link to="/portfolio" className="text-[#696c6d] hover:text-primary transition">
-            Portfolio
-          </Link>
-          <Link to="/testimonials" className="text-[#696c6d] hover:text-primary transition">
-            Testimonials
-          </Link>
-          <Link to="/contact" className="text-[#696c6d] hover:text-primary transition">
-            Contact
-          </Link>
-        </nav>
+        {/* Nav + Socials grouped */}
+        <div className="hidden md:flex items-center gap-x-6">
+          {/* Nav links */}
+          <nav
+            className="
+              flex gap-x-8 font-semibold 
+              px-12 py-4 rounded-xl
+              bg-gray-300/30 backdrop-blur-md
+              shadow-lg
+            "
+          >
+            <Link
+              to="/"
+              className="text-[#003366] hover:text-blue-700 transition"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-[#003366] hover:text-blue-500 transition"
+            >
+              About
+            </Link>
+            <Link
+              to="/services"
+              className="text-[#003366] hover:text-blue-500 transition"
+            >
+              Services
+            </Link>
+            <Link
+              to="/portfolio"
+              className="text-[#003366] hover:text-blue-500 transition"
+            >
+              Portfolio
+            </Link>
+            <Link
+              to="/testimonials"
+              className="text-[#003366] hover:text-blue-500 transition"
+            >
+              Testimonials
+            </Link>
+            <Link
+              to="/contact"
+              className="text-[#003366] hover:text-[#0066cc] transition"
+            >
+              Contact
+            </Link>
+          </nav>
 
-        {/* Social icons (always visible) */}
-        <Socials />
+          {/* Social icons */}
+          <Socials />
+        </div>
 
         {/* MobileNav only below md */}
         <div className="md:hidden flex justify-end">

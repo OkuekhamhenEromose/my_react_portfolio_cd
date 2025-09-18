@@ -2,8 +2,8 @@ module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
     fontFamily: {
-      primary: 'Playfair Display',
-      secondary: 'Mulish',
+      primary: 'Poppins',
+      secondary: 'Inter', // Changed from Mulish to complement Poppins better
     },
     screens: {
       sm: '640px',
@@ -15,7 +15,6 @@ module.exports = {
       colors: {
         primary: '#0E1112',
         grey: '#484B4B',
-
         accent: '#EEF7F9',
       },
     },
