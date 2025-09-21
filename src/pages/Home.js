@@ -21,6 +21,7 @@ const staggerContainer = {
 
 const Home = () => {
   return (
+    // home section container
     <motion.section
       id="home"
       className="section bg-[#f5f7fa] flex items-center"
@@ -29,7 +30,7 @@ const Home = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-3 sm:px-4 lg:px-8 h-full">
-        {/* 🔹 Left Side - Text + Code - Adjusted downward */}
+        {/* 🔹 Left Side - Text + Code */}
         <motion.div
           className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left justify-center mt-10 lg:mt-20"
           variants={staggerContainer}
@@ -52,7 +53,7 @@ const Home = () => {
             I'm <span className="text-[#003366]">Charles Eromose</span>,
           </motion.h1>
 
-          {/* Code block - Larger size and wider */}
+          {/* Code block */}
           <motion.div
             className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl"
             variants={fadeInUp}
@@ -95,38 +96,40 @@ const Home = () => {
             </div>
           </motion.div>
 
-          {/* Hire Me button */}
+          {/* Buttons */}
           <motion.div
             className="mt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             variants={staggerContainer}
           >
+            {/* Hire Me Today button */}
             <motion.a
               href="#projects"
-              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-[0_15px_0_15px] hover:bg-blue-700 transition-colors duration-300 text-sm md:text-base"
+              className="btn"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Hire Me Today
+              Let's Connect
             </motion.a>
+
+            {/* Download CV button (outlined variation) */}
             <motion.a
-  href="/cv"
-  className="relative inline-block px-6 py-3 font-medium group overflow-hidden rounded-[0_15px_0_15px] border border-blue-600 text-blue-600 transition-colors duration-300 text-sm md:text-base"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
->
-  {/* Expanding background - Fixed */}
-  <span className="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 ease-linear group-hover:w-full"></span>
+              href="/cv"
+              className="relative inline-block btn border border-blue-600 bg-transparent text-blue-600 group overflow-hidden"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {/* Expanding background */}
+              <span className="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 ease-linear group-hover:w-full"></span>
 
-  {/* Button text */}
-  <span className="relative z-10 group-hover:text-white">
-    Download CV
-  </span>
-</motion.a>
+              {/* Text */}
+              <span className="relative z-10 group-hover:text-white">
+                Download CV
+              </span>
+            </motion.a>
           </motion.div>
+        </motion.div>
 
-          {/* 🔹 Right Side - Hero Image */}
-        </motion.div>{" "}
-        {/* <-- Add this closing tag for the motion.div started at line 34 */}
+        {/* 🔹 Right Side - Hero Image */}
         <motion.div
           className="w-full lg:w-1/2 flex justify-center lg:justify-end"
           initial={{ opacity: 0, x: 50 }}

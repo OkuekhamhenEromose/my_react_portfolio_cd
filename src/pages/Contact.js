@@ -1,174 +1,121 @@
-import React, { useState } from 'react'; 
-import Address from '../img/contact/addresslocation.png';
-import { Phone, Mail, MapPin } from "lucide-react";
+import React, { useState } from "react";
+import Address from "../img/contact/addresslocation.png";
+import { MapPin } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    phone: "",
-    service: "",
-    message: ""
+    subject: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Handle form submission here
+    // Handle backend API call here
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          
+    <section className="section">
+      <div className="container mx-auto px-4 pt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Contact Form */}
-          <div className="space-y-6">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-green-400 mb-3">
-                Let's work together
-              </h1>
-              <p className="text-gray-400 text-base leading-relaxed mb-1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <p className="text-gray-400 text-base leading-relaxed">
-                Nesciunt sit illo esse commodi.
-              </p>
-            </div>
+          <div>
+            <h1 className="h1 mb-4">Let's work together</h1>
+            <p className="mb-6">
+              I’m a Software Engineer driven by innovation and results. Open to
+              new opportunities where I can add value and grow — let’s connect!
+            </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Name Fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div>
-                  <input
-                    type="text"
-                    name="firstName"
-                    placeholder="Firstname"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors duration-300 text-sm"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    name="lastName"
-                    placeholder="Lastname"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors duration-300 text-sm"
-                    required
-                  />
-                </div>
-              </div>
+              {/* Name */}
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="contact-input"
+                required
+              />
 
-              {/* Email and Phone */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors duration-300 text-sm"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone number"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors duration-300 text-sm"
-                    required
-                  />
-                </div>
-              </div>
+              {/* Email */}
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="contact-input"
+                required
+              />
 
-              {/* Service Selection */}
-              <div>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 bg-transparent border border-gray-600 rounded-lg text-white focus:border-green-400 focus:outline-none transition-colors duration-300 text-sm"
-                  required
-                >
-                  <option value="" className="bg-gray-800">Select a service</option>
-                  <option value="web-development" className="bg-gray-800">Web Development</option>
-                  <option value="mobile-development" className="bg-gray-800">Mobile Development</option>
-                  <option value="ui-ux-design" className="bg-gray-800">UI/UX Design</option>
-                  <option value="consulting" className="bg-gray-800">Consulting</option>
-                </select>
-              </div>
+              {/* Subject */}
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                className="contact-input"
+                required
+              />
 
               {/* Message */}
-              <div>
-                <textarea
-                  name="message"
-                  placeholder="Type your message here."
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows="4"
-                  className="w-full px-3 py-2 bg-transparent border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-green-400 focus:outline-none transition-colors duration-300 resize-vertical text-sm"
-                  required
-                ></textarea>
-              </div>
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleInputChange}
+                rows="6"
+                className="contact-input resize-vertical"
+                required
+              ></textarea>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 text-sm"
-              >
-                Send message
+              <button type="submit" className="btn uppercase">
+                Send Message
               </button>
             </form>
           </div>
 
           {/* Right Side - Map and Contact Info */}
-          <div className="flex flex-col h-full">
-            {/* Map Container - Takes most of the height */}
-            <div className="flex-grow mb-4">
-              <h3 className="text-lg font-semibold text-white mb-3">Find Me Here</h3>
-              <div className="h-full rounded-lg overflow-hidden border border-gray-700">
-                <img 
-                  src={Address} 
-                  alt="Address Direction Map - Ikeja, Lagos" 
-                  className="w-full h-full object-cover min-h-[300px]"
-                />
-              </div>
+          <div className="mt-4">
+            <h3 className="h2 mb-4">Find Me Here</h3>
+            <div className="rounded-lg overflow-hidden border border-gray-300 mb-4">
+              <img
+                src={Address}
+                alt="Address Direction Map - Ikeja, Lagos"
+                className="w-full h-full object-cover min-h-[430px]"
+              />
             </div>
-            
-            {/* Address Information - Placed below the map */}
-            <div className="pt-12">
-              <div className="flex items-center mb-1"> 
-                <MapPin className="w-4 h-4 text-green-400 mr-2" />
-                <h4 className="font-semibold text-white text-sm">My Location</h4>
+
+            {/* Address Info */}
+            <div>
+              <div className="flex items-center mb-2">
+                <MapPin className="w-5 h-5 text-blue-600 mr-2" />
+                <h4 className="h3">My Location</h4>
               </div>
-              <p className="text-gray-300 text-xs">
+              <p className="text-gray-600 text-sm">
                 Ikeja, Lagos State, Nigeria
               </p>
-              <p className="text-gray-400 text-xs mt-1">
+              <p className="text-gray-500 text-xs mt-1">
                 Easily accessible via major highways and public transportation
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

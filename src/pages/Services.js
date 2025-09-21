@@ -20,7 +20,7 @@ const staggerContainer = {
 const Services = () => {
   return (
     <motion.section
-      className="h-screen flex items-center justify-center bg-gray-50"
+      className="section bg-gray-50"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -35,12 +35,7 @@ const Services = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-            Services
-          </h1>
-          <p className="text-gray-600 max-w-lg mx-auto text-sm md:text-base">
-            Comprehensive digital solutions to bring your ideas to life
-          </p>
+          <h1 className="h1 mb-6 mt-4">Services</h1>
         </motion.div>
 
         {/* Services Grid */}
@@ -57,37 +52,36 @@ const Services = () => {
             return (
               <motion.div
                 key={item.id}
-                className="relative bg-white rounded-xl p-6 shadow-lg overflow-hidden group cursor-pointer transition-all duration-300 max-w-sm w-full"
+                className="relative bg-white rounded-xl p-5 shadow-lg overflow-hidden group cursor-pointer transition-all duration-300 max-w-sm w-full"
                 variants={fadeInUp}
                 whileHover={{
                   y: -10,
                   transition: { duration: 0.2 },
                 }}
               >
-                {/* Mirror Flash Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gray-200/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-
-                {/* Icon */}
-                <div className="flex justify-center mb-4 relative z-10">
+                {/* Icon with backdrop effect */}
+                <div className="flex justify-center mb-2 relative z-10">
                   <motion.div
-                    className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
+                    className="w-16 h-16 rounded-full flex items-center justify-center 
+                               bg-gray-300/30 backdrop-blur-md shadow-lg 
+                               group-hover:bg-gray-800 transition-colors duration-300"
                     whileHover={{
                       rotate: 5,
                       scale: 1.05,
                       transition: { duration: 0.2 },
                     }}
                   >
-                    <IconComponent className="text-xl text-blue-600 group-hover:text-white transition-colors duration-300" />
+                    <IconComponent className="text-2xl text-[#003366] group-hover:text-white transition-colors duration-300" />
                   </motion.div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors duration-300 relative z-10">
+                <h3 className="h3 text-center mb-2 group-hover:text-blue-600 transition-colors duration-300 relative z-10">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm text-center leading-relaxed group-hover:text-gray-800 transition-colors duration-300 relative z-10">
+                <p className="text-sm text-center leading-relaxed group-hover:text-gray-800 transition-colors duration-300 relative z-10">
                   {item.desc}
                 </p>
 
@@ -114,23 +108,6 @@ const Services = () => {
               </motion.div>
             );
           })}
-        </motion.div>
-
-        {/* Call-to-Action */}
-        <motion.div
-          className="text-center mt-6"
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <motion.button
-            className="px-5 py-2 bg-gray-800 text-white font-medium rounded-lg shadow hover:bg-gray-900 transition text-sm"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Started
-          </motion.button>
         </motion.div>
       </div>
     </motion.section>

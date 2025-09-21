@@ -2,7 +2,7 @@ import React from "react";
 import Socials from "./Socials";
 import Logo from "../img/header/SmallSquareLogoJpg-removebg-preview.png";
 import MobileNav from "./MobileNav";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -19,47 +19,60 @@ const Header = () => {
           <nav
             className="
               flex gap-x-8 font-semibold 
-              px-12 py-4 rounded-xl
+              px-12 py-4 rounded-full
               bg-gray-300/30 backdrop-blur-md
               shadow-lg
             "
           >
-            <Link
+            <NavLink
               to="/"
-              className="text-[#003366] hover:text-blue-700 transition"
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/about"
-              className="text-[#003366] hover:text-blue-500 transition"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               About
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/services"
-              className="text-[#003366] hover:text-blue-500 transition"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Services
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/portfolio"
-              className="text-[#003366] hover:text-blue-500 transition"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Portfolio
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/testimonials"
-              className="text-[#003366] hover:text-blue-500 transition"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Testimonials
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
-              className="text-[#003366] hover:text-[#0066cc] transition"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </nav>
 
           {/* Social icons */}

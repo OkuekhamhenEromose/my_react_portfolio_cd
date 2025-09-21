@@ -15,34 +15,44 @@ import {
   FaYoutube
 } from 'react-icons/fa';
 
-import Image1 from "../img/portfolio/1.png";
-import Image2 from "../img/portfolio/2.png";
-import Image3 from "../img/portfolio/3.png";
-import Image4 from "../img/portfolio/4.png";
+import image1 from "../img/testimonials/brightnwachukwu.jpeg";
+import image2 from "../img/testimonials/enoch olisa.jpeg";
+import image3 from "../img/testimonials/monicaholmsremmen.jpeg";
+import image4 from "../img/testimonials/samuelokpe.jpeg";
+import image5 from "../img/testimonials/michaelojemoron.jpeg";
+import image6 from "../img/testimonials/nathanielnosa.jpeg";
+
+import Image1 from "../img/portfolio/insomnia1.png";
+import Image2 from "../img/portfolio/insomnia2.png";
+import Image3 from "../img/portfolio/chtravels.png";
+import Image4 from "../img/portfolio/realestate-img.png";
+import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
+import Image6 from "../img/portfolio/portfolio-img.png";
+
 
 // Stats Project Data
 export const project = [
   {
     id: 1,
-    icon: <FaCloud className="text-gray-500 text-3xl" />,
+    icon: <FaCloud className="text-[#003366] text-3xl" />,
     num: 89,
     title: "HAPPY CLIENTS",
   },
   {
     id: 2,
-    icon: <FaHeart className="text-gray-500 text-3xl" />,
+    icon: <FaHeart className="text-[#003366] text-3xl" />,
     num: 231,
     title: "PROJECTS COMPLETED",
   },
   {
     id: 3,
-    icon: <FaGlobe className="text-gray-500 text-3xl" />,
+    icon: <FaGlobe className="text-[#003366] text-3xl" />,
     num: 108,
     title: "FILES DOWNLOADED",
   },
   {
     id: 4,
-    icon: <FaUser className="text-gray-500 text-3xl" />,
+    icon: <FaUser className="text-[#003366] text-3xl" />,
     num: 1446,
     title: "LINES OF CODE",
   },
@@ -62,66 +72,68 @@ export const portfolio = [
 export const portfolioProjects = [
   {
     id: 1,
-    image: Image1,
-    title: "E-Commerce Platform",
-    category: "web",
-    description: "Full-stack e-commerce solution with React and Node.js",
-    technologies: ["React", "Node.js", "MongoDB"],
-    link: "#"
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing my skills, projects, and contact information.",
+    tags: ["Frontend"],
+    image: Image6,
+    demoLink: "https://timely-axolotl-0f4be3.netlify.app",
+    githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
   },
   {
     id: 2,
+    title: "Listings App",
+    description: "Backend-powered listings platform for managing and showcasing property ads.",
+    tags: ["Backend"],
     image: Image2,
-    title: "Mobile Banking App",
-    category: "mobile",
-    description: "Secure mobile banking application with real-time transactions",
-    technologies: ["React Native", "Firebase", "Redux"],
-    link: "#"
+    demoLink: "https://housing-properties.onrender.com",
+    githubLink: "https://github.com/OkuekhamhenEromose/housing_properties",
   },
   {
     id: 3,
-    image: Image3,
-    title: "Task Management Dashboard",
-    category: "web",
-    description: "Professional project management tool with team collaboration",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
-    link: "#"
+    title: "Real Estate Website",
+    description: "Property listings app for buying or renting homes. Featuring search, filters, and a clean UI.",
+    tags: ["Frontend"],
+    image: Image4,
+    demoLink: "https://dancing-youtiao-914380.netlify.app",
+    githubLink: "https://github.com/OkuekhamhenEromose/RealEstateModern",
   },
   {
     id: 4,
-    image: Image4,
-    title: "Brand Identity Design",
-    category: "design",
-    description: "Complete brand identity package with logo and guidelines",
-    technologies: ["Figma", "Adobe Creative Suite", "Sketch"],
-    link: "#"
+    title: "CH-Travels",
+    description: "A modern travel agency app that helps users explore destinations and book trips.",
+    tags: ["Frontend"],
+    image: Image3,
+    demoLink: "https://shiny-scone-6fc98c.netlify.app",
+    githubLink: "https://github.com/OkuekhamhenEromose/chardevtravel",
   },
   {
     id: 5,
+    title: "Resume Builder",
+    description: "Resume generation web app with backend support for user data and storage.",
+    tags: ["Backend"],
     image: Image1,
-    title: "Weather Forecast App",
-    category: "mobile",
-    description: "Real-time weather app with location-based forecasting",
-    technologies: ["Flutter", "Weather API", "SQLite"],
-    link: "#"
+    demoLink: "https://renewschool-1.onrender.com",
+    githubLink: "https://github.com/OkuekhamhenEromose/myresume",
   },
   {
     id: 6,
-    image: Image2,
-    title: "Restaurant Website",
-    category: "web",
-    description: "Modern restaurant website with online ordering system",
-    technologies: ["React", "Strapi", "Stripe"],
-    link: "#"
-  }
+    title: "CHBlog App",
+    description: "Full-stack blog app with authentication, post management, and modern UI.",
+    tags: ["Full-stack"],
+    image: Image5,
+    demoLink: "https://subtle-blini-446f27.netlify.app/",
+    githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
+  },
 ];
 
+// ✅ Update categories to match tags
 export const projectCategories = [
   { id: "all", name: "All Projects", count: 6 },
-  { id: "web", name: "Web Development", count: 3 },
-  { id: "mobile", name: "Mobile Apps", count: 2 },
-  { id: "design", name: "Design", count: 1 }
+  { id: "Frontend", name: "Frontend", count: 3 },
+  { id: "Backend", name: "Backend", count: 2 },
+  { id: "Full-stack", name: "Full-Stack", count: 1 },
 ];
+
 
 // Statistics
 export const statistics = [
@@ -176,24 +188,45 @@ export const about = [
 export const testimonials = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitordapibus dictum.Fusce faucibus ligula scelerisque, eleifend turpis in",
-    image: "./images/testimonials/team-1.png",
-    name: "Alamin Musa",
-    post: "Front End Developer",
+    text: "Charles has an exceptional eye for detail. He approaches UI/UX challenges with creativity while ensuring performance and accessibility aren’t compromised. What stands out most is his consistency — he always delivers with precision and a positive attitude, even under tight deadlines",
+    image: image1,
+    name: "Bright Nwachukwu",
+    post: "Product/Project Management || Software Engineering: Heavy- Front End",
   },
   {
     id: 2,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitordapibus dictum.Fusce faucibus ligula scelerisque, eleifend turpis in",
-    image: "./images/testimonials/team-2.png",
-    name: "Alex Ander",
-    post: "Back End Developer",
+    text: "Charles is more than just a talented developer — he’s a professional who uplifts the entire team. His calm approach under pressure, willingness to mentor others, and ability to translate technical concepts into simple terms make him a rare asset. He combines empathy with expertise, and that’s a quality you don’t often find.",
+    image: image2,
+    name: "Enoch Olisa",
+    post: "Software Quality Engineer with CTFL | Test Automation Engineer with CTAL-TAE | Software Project Manager with PMP",
   },
   {
     id: 3,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitordapibus dictum.Fusce faucibus ligula scelerisque, eleifend turpis in",
-    image: "./images/testimonials/team-3.png",
-    name: "GorkCoder",
-    post: "React Developer",
+    text: "Charles is the kind of engineer every team needs. He’s collaborative, reliable, and never shies away from responsibility. Beyond writing excellent code, he brings energy to discussions, asks the right questions, and motivates others to push their limits. A true problem-solver.",
+    image: image3,
+    name: "Monica Holm-Remmen",
+    post: "Recruiter & Career Consultant. Connecting High-Performing Professionals and Top Talent with Leading Employers",
+  },
+  {
+    id: 4,
+    text: "What I admire most about Charles is his resilience and curiosity. He doesn’t just stop at solving a bug — he digs deeper to understand why it happened and how to prevent it in the future. That mindset reflects his commitment to building not just apps, but sustainable solutions.",
+    image: image4,
+    name: "Samuel Okpe",
+    post: "Software Engineer | Business Enthusiast",
+  },
+  {
+    id: 5,
+    text: "I’ve seen very few engineers who embrace learning as quickly and effectively as Charles. Whether it’s mastering new frameworks, adopting best practices, or diving into DevOps tools, he adapts seamlessly. His attitude toward growth makes him a valuable teammate in any fast-paced environment.",
+    image: image5,
+    name: "Michael Ojemoron",
+    post: "Entrepreneur|Cloud Architect|Community Builder|Technical Writer|MERN Stack|Python/Django|AI|LLM",
+  },
+  {
+    id: 6,
+    text: "Working with Charles has been an absolute privilege. His ability to break down complex problems into clear, scalable solutions shows not only strong technical skills but also a deep understanding of software engineering principles. He has an admirable discipline toward clean code and architecture",
+    image: image6,
+    name: "Nathaniel Nosa",
+    post: "Full-Stack Developer | TypeScript | Django | MERN",
   },
 ];
 
