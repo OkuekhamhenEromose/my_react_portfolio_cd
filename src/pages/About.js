@@ -6,7 +6,7 @@ import Counter from "../components/Counter";
 const About = () => {
   return (
     <section className="section bg-white">
-      <div className="container mx-auto h-full flex flex-col lg:flex-row items-center justify-center gap-12 text-center lg:text-left px-4">
+      <div className="container mt-20 mx-auto h-full flex flex-col lg:flex-row items-center justify-center gap-12 text-center lg:text-left px-4">
         
         {/* Image */}
         <div className="w-full lg:w-1/3 flex justify-center">
@@ -48,7 +48,7 @@ const About = () => {
           </Link>
 
           {/* Counter Section */}
-          <div className="w-full mt-8">
+          <div className="w-full mt-8 mb-6">
             <Counter />
           </div>
         </div>

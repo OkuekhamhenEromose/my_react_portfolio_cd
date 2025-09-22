@@ -26,7 +26,7 @@ const Services = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-4 flex flex-col justify-between h-full py-10">
+      <div className="container mt-12 mx-auto px-4 flex flex-col justify-between h-full py-4">
         {/* Section Heading */}
         <motion.div
           className="text-center"
@@ -35,7 +35,7 @@ const Services = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <h1 className="h1 mb-6 mt-4">Services</h1>
+          <h1 className="h1 mb-2">Services</h1>
         </motion.div>
 
         {/* Services Grid */}

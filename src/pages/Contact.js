@@ -25,18 +25,18 @@ const Contact = () => {
   };
 
   return (
-    <section className="section">
+    <section className="section py-2">
       <div className="container mx-auto px-4 pt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
           {/* Left Side - Contact Form */}
           <div>
-            <h1 className="h1 mb-4">Let's work together</h1>
-            <p className="mb-6">
+            <h1 className="h1 mb-2 mt-4">Let's work together</h1>
+            <p className="mb-4">
               I’m a Software Engineer driven by innovation and results. Open to
               new opportunities where I can add value and grow — let’s connect!
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               {/* Name */}
               <input
                 type="text"
@@ -91,7 +91,7 @@ const Contact = () => {
           {/* Right Side - Map and Contact Info */}
           <div className="mt-4">
             <h3 className="h2 mb-4">Find Me Here</h3>
-            <div className="rounded-lg overflow-hidden border border-gray-300 mb-4">
+            <div className="rounded-lg overflow-hidden border border-gray-300 mb-2">
               <img
                 src={Address}
                 alt="Address Direction Map - Ikeja, Lagos"
@@ -100,7 +100,7 @@ const Contact = () => {
             </div>
 
             {/* Address Info */}
-            <div>
+            <div className="space-y-1">
               <div className="flex items-center mb-2">
                 <MapPin className="w-5 h-5 text-blue-600 mr-2" />
                 <h4 className="h3">My Location</h4>

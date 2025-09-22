@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Socials from "./Socials";
 import Logo from "../img/header/SmallSquareLogoJpg-removebg-preview.png";
 import MobileNav from "./MobileNav";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsVisible(false); // hide when not at top
+      } else {
+        setIsVisible(true); // show when at top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[80px] flex items-center">
+    <header
+      className={`fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[80px] flex items-center transition-transform duration-500 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex flex-row items-center justify-between w-full">
         {/* Logo */}
         <Link to={"/"} className="max-w-[60px] mt-4">

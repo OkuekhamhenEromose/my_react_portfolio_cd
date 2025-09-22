@@ -98,7 +98,7 @@ const Home = () => {
 
           {/* Buttons */}
           <motion.div
-            className="mt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            className="mt-4 mb-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             variants={staggerContainer}
           >
             {/* Hire Me Today button */}

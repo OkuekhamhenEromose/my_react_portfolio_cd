@@ -99,7 +99,7 @@ const Portfolio = () => {
         >
           {/* Project grid */}
           <motion.div
-            className="grid grid-cols-2 gap-3 md:gap-4 mb-4"
+            className="grid grid-cols-2 gap-3 md:gap-4 mb-2 mt-6"
             variants={staggerContainer}
           >
             {currentProjects.map((project) => (
@@ -151,7 +151,7 @@ const Portfolio = () => {
           {/* Pagination */}
           {totalPages > 1 && (
             <motion.div
-              className="flex justify-center items-center gap-4 mb-4"
+              className="flex justify-center items-center gap-4 mb-2"
               variants={fadeInUp}
             >
               <button
