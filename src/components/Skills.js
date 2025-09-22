@@ -38,9 +38,11 @@ const Skills = () => {
   const duplicatedSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section className="w-full bg-white py-4">
+    <section className="w-full bg-white dark:bg-darkbg py-4 transition-colors duration-300">
       <div className="container mx-auto px-4">
-        <h2 className="h2 text-center mb-6">Technologies I Work With</h2>
+        <h2 className="h2 text-center mb-6 text-[#003366] dark:text-gray-200">
+          Technologies I Work With
+        </h2>
 
         <div className="overflow-hidden">
           <div className="flex gap-8 animate-slideLeft">
@@ -52,12 +54,10 @@ const Skills = () => {
                   className="flex flex-col items-center gap-2 min-w-[60px] flex-shrink-0 transition-transform duration-300 hover:scale-110"
                 >
                   <IconComponent
-                    className="transition duration-300 text-gray-800"
-                    style={{
-                      fontSize: "2.5rem",
-                    }}
+                    className="transition duration-300 text-gray-800 dark:text-gray-200"
+                    style={{ fontSize: "2.5rem" }}
                   />
-                  <span className="font-medium text-gray-600 text-xs md:text-sm">
+                  <span className="font-medium text-gray-600 dark:text-gray-400 text-xs md:text-sm">
                     {skill.name}
                   </span>
                 </div>

@@ -103,7 +103,7 @@ const Home = () => {
           >
             {/* Hire Me Today button */}
             <motion.a
-              href="#projects"
+              href="/contact"
               className="btn"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

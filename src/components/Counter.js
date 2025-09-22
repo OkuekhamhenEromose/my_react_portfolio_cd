@@ -8,19 +8,28 @@ const Counter = () => {
       {project.map((item) => (
         <div
           key={item.id}
-          className="bg-white rounded-lg shadow-md p-4 md:p-5 transition-transform duration-300 ease-in-out hover:-translate-y-1 text-center"
+          className="
+            bg-white dark:bg-[#2a2a2d] 
+            rounded-lg shadow-md p-4 md:p-5 
+            transition-transform duration-300 ease-in-out hover:-translate-y-1 
+            text-center
+          "
           data-aos="zoom-in"
         >
           {/* Icon */}
-          <div className="mb-1 md:mb-2 flex justify-center">{item.icon}</div>
+          <div className="mb-1 md:mb-2 flex justify-center text-gray-800 dark:text-gray-200">
+            {item.icon}
+          </div>
 
           {/* Number */}
-          <h2 className="h2">
+          <h2 className="h2 text-[#003366] dark:text-gray-200">
             <CountUp enableScrollSpy duration={2} end={item.num} />+
           </h2>
 
           {/* Title */}
-          <h3 className="h3">{item.title}</h3>
+          <h3 className="h3 text-[#003366] dark:text-gray-300">
+            {item.title}
+          </h3>
         </div>
       ))}
     </div>

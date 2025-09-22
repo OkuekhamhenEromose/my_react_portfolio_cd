@@ -20,7 +20,7 @@ const staggerContainer = {
 const Services = () => {
   return (
     <motion.section
-      className="section bg-gray-50"
+      className="section bg-gray-50 dark:bg-darkbg transition-colors duration-300"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -35,7 +35,9 @@ const Services = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <h1 className="h1 mb-2">Services</h1>
+          <h1 className="h1 mb-2 text-[#003366] dark:text-gray-200">
+            Services
+          </h1>
         </motion.div>
 
         {/* Services Grid */}
@@ -52,7 +54,7 @@ const Services = () => {
             return (
               <motion.div
                 key={item.id}
-                className="relative bg-white rounded-xl p-5 shadow-lg overflow-hidden group cursor-pointer transition-all duration-300 max-w-sm w-full"
+                className="relative bg-white dark:bg-[#2a2a2d] rounded-xl p-5 shadow-lg overflow-hidden group cursor-pointer transition-all duration-300 max-w-sm w-full"
                 variants={fadeInUp}
                 whileHover={{
                   y: -10,
@@ -63,31 +65,31 @@ const Services = () => {
                 <div className="flex justify-center mb-2 relative z-10">
                   <motion.div
                     className="w-16 h-16 rounded-full flex items-center justify-center 
-                               bg-gray-300/30 backdrop-blur-md shadow-lg 
-                               group-hover:bg-gray-800 transition-colors duration-300"
+                               bg-gray-300/30 dark:bg-gray-700/50 backdrop-blur-md shadow-lg 
+                               group-hover:bg-gray-800 dark:group-hover:bg-gray-600 transition-colors duration-300"
                     whileHover={{
                       rotate: 5,
                       scale: 1.05,
                       transition: { duration: 0.2 },
                     }}
                   >
-                    <IconComponent className="text-2xl text-[#003366] group-hover:text-white transition-colors duration-300" />
+                    <IconComponent className="text-2xl text-[#003366] dark:text-gray-200 group-hover:text-white transition-colors duration-300" />
                   </motion.div>
                 </div>
 
                 {/* Title */}
-                <h3 className="h3 text-center mb-2 group-hover:text-blue-600 transition-colors duration-300 relative z-10">
+                <h3 className="h3 text-center mb-2 text-[#003366] dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 relative z-10">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-center leading-relaxed group-hover:text-gray-800 transition-colors duration-300 relative z-10">
+                <p className="text-sm text-center leading-relaxed text-gray-700 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-300 relative z-10">
                   {item.desc}
                 </p>
 
                 {/* Hidden Learn More Link */}
                 <div className="text-center mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
-                  <span className="text-blue-600 text-sm font-medium inline-flex items-center">
+                  <span className="text-blue-600 dark:text-blue-400 text-sm font-medium inline-flex items-center">
                     Learn more
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

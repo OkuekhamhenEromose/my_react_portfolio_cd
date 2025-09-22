@@ -126,7 +126,7 @@ const Portfolio = () => {
                     </p>
                     <div className="flex justify-center gap-2">
                       <a
-                        href={project.liveLink}
+                        href={project.demoLink}
                         target="_blank"
                         rel="noreferrer"
                         className="p-1.5 bg-white bg-opacity-20 rounded-full hover:bg-opacity-30 transition"
@@ -134,7 +134,7 @@ const Portfolio = () => {
                         <ExternalLink size={14} />
                       </a>
                       <a
-                        href={project.github}
+                        href={project.githubLink}
                         target="_blank"
                         rel="noreferrer"
                         className="p-1.5 bg-white bg-opacity-20 rounded-full hover:bg-opacity-30 transition"
