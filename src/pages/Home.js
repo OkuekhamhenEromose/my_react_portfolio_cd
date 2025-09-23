@@ -134,16 +134,15 @@ const Home = () => {
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }} // animate every time scrolled into view
+            viewport={{ once: false, amount: 0.3 }}
           >
-            {/* Hire Me Today button */}
+            {/* View My Works button */}
             <motion.a
-              className="btn"
-              variants={fadeInUpBounce} // fade-in-up with bounce
+              variants={fadeInUpBounce}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to={"/contact"} className="btn text-base md:text-lg">
+              <Link to="/contact" className="btn text-base md:text-lg">
                 View My Works
               </Link>
             </motion.a>
@@ -151,16 +150,21 @@ const Home = () => {
             {/* Download CV button */}
             <motion.a
               href="/cv"
-              className="relative inline-block btn border border-blue-600 bg-transparent text-blue-600 group overflow-hidden"
-              variants={fadeInUpBounce} // fade-in-up with bounce
+              variants={fadeInUpBounce}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="
+    relative inline-block btn 
+    border border-blue-600 text-[#003366] group overflow-hidden
+    bg-gray-300/30 backdrop-blur-md shadow-lg 
+    dark:bg-gray-800/50
+  "
             >
               {/* Expanding background */}
               <span className="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 ease-linear group-hover:w-full"></span>
 
               {/* Text */}
-              <span className="relative z-10 group-hover:text-white">
+              <span className="relative z-10 group-hover:text-white text-base md:text-lg">
                 Download CV
               </span>
             </motion.a>
