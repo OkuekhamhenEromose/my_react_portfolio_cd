@@ -5,18 +5,45 @@ import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
-
-const staggerContainer = {
-  animate: {
+// Fade-in-up variant for individual items
+// Fade-in-up with bounce variant
+const fadeInUpBounce = {
+  hidden: { opacity: 0, y: 20 }, // start slightly below
+  visible: {
+    opacity: 1,
+    y: 0,
     transition: {
-      staggerChildren: 0.1,
+      type: "spring", // gives a bounce effect
+      stiffness: 120, // bounce intensity
+      damping: 10, // how quickly it settles
     },
   },
+};
+
+// Stagger container for sequential animation
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15, // delay between children
+    },
+  },
+};
+
+// Define the fadeInDown variant
+const fadeInDown = {
+  hidden: { opacity: 0, y: -20 }, // start slightly above
+  visible: {
+    opacity: 1,
+    y: 0, // end at original position
+    transition: { duration: 1.0, ease: "easeOut" },
+  },
+};
+
+const zoomIn = {
+  initial: { opacity: 0, scale: 0.4 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 2.0, ease: "easeOut" },
 };
 
 const Home = () => {
@@ -37,10 +64,11 @@ const Home = () => {
           initial="initial"
           animate="animate"
         >
-          {/* Intro heading */}
           <motion.p
             className="text-base sm:text-lg text-gray-800 font-semibold tracking-wider"
-            variants={fadeInUp}
+            variants={fadeInDown} // updated
+            initial="hidden"
+            animate="visible"
           >
             Hello There!
           </motion.p>
@@ -48,15 +76,20 @@ const Home = () => {
           {/* Name and role */}
           <motion.h1
             className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-2 sm:mb-3 lg:mb-4 leading-tight whitespace-nowrap"
-            variants={fadeInUp}
+            variants={fadeInDown} // updated
+            initial="hidden"
+            animate="visible"
           >
             I'm <span className="text-[#003366]">Charles Eromose</span>,
           </motion.h1>
 
           {/* Code block */}
+          {/* Code Block with Zoom-in */}
           <motion.div
             className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl"
-            variants={fadeInUp}
+            variants={zoomIn} // 🔹 Apply zoom-in animation
+            initial="initial"
+            animate="animate"
           >
             <div className="code-display">
               <SyntaxHighlighter
@@ -95,26 +128,31 @@ const Home = () => {
               </SyntaxHighlighter>
             </div>
           </motion.div>
-
           {/* Buttons */}
           <motion.div
             className="mt-4 mb-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }} // animate every time scrolled into view
           >
             {/* Hire Me Today button */}
             <motion.a
-              href="/contact"
               className="btn"
+              variants={fadeInUpBounce} // fade-in-up with bounce
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let's Connect
+              <Link to={"/contact"} className="btn text-base md:text-lg">
+                View My Works
+              </Link>
             </motion.a>
 
-            {/* Download CV button (outlined variation) */}
+            {/* Download CV button */}
             <motion.a
               href="/cv"
               className="relative inline-block btn border border-blue-600 bg-transparent text-blue-600 group overflow-hidden"
+              variants={fadeInUpBounce} // fade-in-up with bounce
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

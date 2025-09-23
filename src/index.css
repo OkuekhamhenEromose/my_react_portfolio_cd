@@ -64,12 +64,13 @@
 
   /* Buttons */
   .btn {
-    @apply px-3 py-2 bg-blue-600 text-white font-medium 
-           rounded-[0_15px_0_15px] 
-           hover:bg-blue-700 transition-colors duration-300 
-           text-sm md:text-base 
-           flex items-center justify-center;
-  }
+  @apply inline-flex items-center justify-center 
+         px-3 py-2 bg-blue-600 text-white font-medium 
+         rounded-[0_15px_0_15px] 
+         hover:bg-blue-700 transition-colors duration-300 
+         text-sm md:text-base 
+         w-auto; /* 👈 shrink-to-fit */
+}
 }
 
 /* 🔹 Infinite scrolling animation for skills section */
