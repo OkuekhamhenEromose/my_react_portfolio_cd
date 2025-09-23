@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+// Import your CV file - make sure to place it in the src/assets or public folder
+import charlesEromoseCV from "../assets/CharlesEromoseCV.pdf"; // Update path accordingly
+
 // Fade-in-up variant for individual items
 // Fade-in-up with bounce variant
 const fadeInUpBounce = {
@@ -47,6 +50,18 @@ const zoomIn = {
 };
 
 const Home = () => {
+  
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // If using import method (CV in src/assets folder)
+    const link = document.createElement('a');
+    link.href = charlesEromoseCV;
+    link.download = 'Charles_Eromose_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     // home section container
     <motion.section
@@ -147,27 +162,28 @@ const Home = () => {
               </Link>
             </motion.a>
 
-            {/* Download CV button */}
-            <motion.a
-              href="/cv"
+            {/* Download CV button - Updated with download functionality */}
+            <motion.button
+              onClick={handleDownloadCV}
               variants={fadeInUpBounce}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="
-    relative inline-block btn 
-    border border-blue-600 text-[#003366] group overflow-hidden
-    bg-gray-300/30 backdrop-blur-md shadow-lg 
-    dark:bg-gray-800/50
-  "
+                relative inline-block btn 
+                border border-blue-600 text-[#003366] group overflow-hidden
+                bg-gray-300/30 backdrop-blur-md shadow-lg 
+                dark:bg-gray-800/50
+                text-base md:text-lg
+              "
             >
               {/* Expanding background */}
               <span className="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 ease-linear group-hover:w-full"></span>
 
               {/* Text */}
-              <span className="relative z-10 group-hover:text-white text-base md:text-lg">
+              <span className="relative z-10 group-hover:text-white">
                 Download CV
               </span>
-            </motion.a>
+            </motion.button>
           </motion.div>
         </motion.div>
 

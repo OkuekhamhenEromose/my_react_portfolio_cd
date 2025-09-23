@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Address from "../img/contact/addresslocation.png";
-import { MapPin } from "lucide-react";
+import { MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 // Animation variants
 const fadeInDown = {
@@ -55,6 +56,10 @@ const Contact = () => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState({ text: "", type: "" }); // type: 'success' or 'error'
+  const formRef = useRef();
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -63,10 +68,57 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const showMessage = (text, type) => {
+    setMessage({ text, type });
+    setTimeout(() => {
+      setMessage({ text: "", type: "" });
+    }, 5000);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle backend API call here
+    setIsLoading(true);
+
+    // Basic validation
+    const { name, email, subject, message } = formData;
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+    if (!name || !email || !subject || !message) {
+      showMessage("Please fill in all fields", "error");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!email.match(emailPattern)) {
+      showMessage("Please enter a valid email address", "error");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        "service_i3co2is", // Replace with your EmailJS service ID
+        "template_jvifwwf", // Replace with your EmailJS template ID
+        formRef.current,
+        "8TSj0kj-2cY_yk4X2" // Replace with your EmailJS public key
+      );
+
+      showMessage("Message sent successfully!", "success");
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      showMessage("Failed to send message. Please try again.", "error");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -77,6 +129,25 @@ const Contact = () => {
       variants={leftSideVariants}
     >
       <div className="container mx-auto px-4 pt-12">
+        {/* Message Notification */}
+        {message.text && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={`fixed top-4 right-4 z-50 px-3 py-2 rounded-md shadow-md max-w-sm text-sm font-medium flex items-center ${
+              message.type === "success" ? "bg-green-400" : "bg-red-400"
+            }`}
+            style={{ color: "#003366" }}
+          >
+            {message.type === "success" ? (
+              <CheckCircle className="w-4 h-4 mr-2" />
+            ) : (
+              <AlertCircle className="w-4 h-4 mr-2" />
+            )}
+            <span>{message.text}</span>
+          </motion.div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
           {/* Left Side - Contact Form */}
           <motion.div variants={leftSideVariants}>
@@ -92,7 +163,7 @@ const Contact = () => {
             </motion.p>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-3">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
               <motion.input
                 type="text"
                 name="name"
@@ -140,30 +211,36 @@ const Contact = () => {
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                className="btn uppercase"
+                disabled={isLoading}
+                className={`btn uppercase flex items-center justify-center gap-2 ${
+                  isLoading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
                 variants={fadeInLeft}
-                whileHover={{ scale: 1.05, x: 5 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={!isLoading ? { scale: 1.05, x: 5 } : {}}
+                whileTap={!isLoading ? { scale: 0.95 } : {}}
               >
-                Send Message
+                {isLoading ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send size={16} />
+                  </>
+                )}
               </motion.button>
             </form>
           </motion.div>
 
           {/* Right Side - Map and Contact Info */}
-          <motion.div 
-            className="mt-4"
-            variants={rightSideVariants}
-          >
-            {/* Updated heading with fadeInDown animation */}
-            <motion.h3 
-              className="h2 mb-4" 
-              variants={fadeInDown}
-            >
+          <motion.div className="mt-4" variants={rightSideVariants}>
+            <motion.h3 className="h2 mb-4" variants={fadeInDown}>
               Find Me Here
             </motion.h3>
-            
-            <motion.div 
+
+            <motion.div
               className="rounded-lg overflow-hidden border border-gray-300 mb-2"
               variants={fadeInRight}
             >
@@ -175,10 +252,7 @@ const Contact = () => {
             </motion.div>
 
             {/* Address Info */}
-            <motion.div 
-              className="space-y-1"
-              variants={fadeInRight}
-            >
+            <motion.div className="space-y-1" variants={fadeInRight}>
               <div className="flex items-center mb-2">
                 <MapPin className="w-5 h-5 text-blue-600 mr-2" />
                 <h4 className="h3">My Location</h4>
