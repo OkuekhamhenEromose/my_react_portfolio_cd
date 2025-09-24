@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { services } from "../components/dummydata";
 import { ArrowRight } from "lucide-react";
+import { NavLink } from "react-router-dom"; // ✅ import NavLink
 
 const Services = () => {
   const containerVariants = {
@@ -69,11 +70,14 @@ const Services = () => {
                   {item.desc}
                 </p>
 
-                {/* Learn More */}
+                {/* View Project */}
                 <div className="text-center mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-blue-600 dark:text-blue-400 text-sm font-medium inline-flex items-center">
-                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                  </span>
+                  <NavLink 
+                    to="/portfolio" 
+                    className="text-blue-600 dark:text-blue-400 text-sm font-medium inline-flex items-center hover:underline"
+                  >
+                    View Project <ArrowRight className="w-4 h-4 ml-1" />
+                  </NavLink>
                 </div>
               </motion.div>
             );

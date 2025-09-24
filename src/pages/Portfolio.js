@@ -254,7 +254,7 @@ const Portfolio = () => {
                     <h3 className="h3 text-white text-sm mb-1">
                       {project.title}
                     </h3>
-                    <p className="p text-xs mb-3 opacity-90">
+                    <p className="p text-white text-xs mb-3 opacity-90">
                       {project.description}
                     </p>
                     <div className="flex justify-center gap-2">
@@ -284,7 +284,7 @@ const Portfolio = () => {
           {/* Pagination */}
           {totalPages > 1 && (
             <motion.div
-              className="flex justify-center items-center gap-4 mb-2"
+              className="flex mt-2 justify-center items-center gap-4 mb-2"
               variants={paginationVariants}
             >
               <motion.button
@@ -326,7 +326,7 @@ const Portfolio = () => {
 
           {/* Categories */}
           <motion.div
-            className="flex flex-wrap justify-center gap-2"
+            className="flex pt-1 flex-wrap justify-center gap-2"
             variants={categoriesVariants}
           >
             {projectCategories.map((category) => (

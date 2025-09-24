@@ -73,7 +73,7 @@ const Home = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-3 sm:px-4 lg:px-8 h-full">
         {/* 🔹 Left Side - Text */}
         <motion.div
-          className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left justify-center mt-10 lg:mt-20 order-2 lg:order-1"
+          className="w-full lg:w-[53%] flex flex-col items-center lg:items-start text-center lg:text-left justify-center mt-10 lg:mt-20 order-2 lg:order-1"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
@@ -96,15 +96,13 @@ const Home = () => {
             I'm <span className="text-[#003366]">Charles Eromose</span>,
           </motion.h1>
 
-          {/* Code block */}
-          {/* Code Block with Zoom-in */}
           <motion.div
-            className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl"
+            className="w-full max-w-lg sm:max-w-[90%] md:max-w-4xl lg:max-w-5xl"
             variants={zoomIn} // 🔹 Apply zoom-in animation
             initial="initial"
             animate="animate"
           >
-            <div className="code-display">
+            <div className="code-display overflow-x-auto">
               <SyntaxHighlighter
                 language="typescript"
                 customStyle={{
@@ -141,6 +139,7 @@ const Home = () => {
               </SyntaxHighlighter>
             </div>
           </motion.div>
+
           {/* Buttons */}
           <motion.div
             className="mt-4 mb-6 flex sm:flex-row gap-4 justify-center lg:justify-start"

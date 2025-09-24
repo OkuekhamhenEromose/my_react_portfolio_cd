@@ -94,7 +94,7 @@ const About = () => {
               className="mb-4 leading-relaxed text-base"
               variants={fadeInUp}
             >
-              I'm Charles Eromose Okuekhahmen, a Full Stack Engineer with 3+
+              I'm Charles Eromose Okuekhahmen, a Full Stack Engineer with 4+
               years of experience in web development, databases, and network
               engineering. I've built solutions from school systems to
               e-commerce and blogs, delivering clean UIs, efficient APIs, and

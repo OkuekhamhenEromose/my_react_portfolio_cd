@@ -1,19 +1,20 @@
-import { FaCloud, FaHeart, FaGlobe, FaUser } from 'react-icons/fa';
+import { FaHeart, FaGlobe, FaUser } from 'react-icons/fa';
 import { 
-  FaPalette, 
-  FaCode, 
+  FaPalette,  
   FaMobile, 
-  FaPaintBrush, 
-  FaIcons, 
-  FaHeadset,
+  FaServer, 
+  FaCloud, 
+  FaCode,  
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelope,
+  FaDatabase,
   FaFacebook,
   FaTwitter,
   FaInstagram,
   FaYoutube
 } from 'react-icons/fa';
+
 
 import image1 from "../img/testimonials/brightnwachukwu.jpeg";
 import image2 from "../img/testimonials/enoch olisa.jpeg";
@@ -135,12 +136,42 @@ export const statistics = [
 
 // Services
 export const services = [
-  { id: 1, icon: FaPalette, title: "Creative Design", desc: "Custom UI/UX designs that improve user experience and boost engagement." },
-  { id: 2, icon: FaCode, title: "Clean Code", desc: "Well-structured, maintainable code following best practices and modern development standards." },
-  { id: 3, icon: FaMobile, title: "Responsive Design", desc: "Websites and applications that work flawlessly across all devices and screen sizes." },
-  { id: 4, icon: FaPaintBrush, title: "Modern UI", desc: "Contemporary user interfaces using modern design principles and frameworks." },
-  { id: 5, icon: FaIcons, title: "Icon Systems", desc: "Custom icon sets and icon integration for cohesive visual design systems." },
-  { id: 6, icon: FaHeadset, title: "Awesome Support", desc: "Reliable technical support and maintenance services for your digital solutions." },
+  { 
+    id: 1, 
+    icon: FaPalette, 
+    title: "UI/UX & Creative Design", 
+    desc: "Intuitive, user-centered interfaces that combine aesthetics with functionality to engage and convert users." 
+  },
+  { 
+    id: 2, 
+    icon: FaCode, 
+    title: "Full-Stack Development", 
+    desc: "End-to-end development from responsive frontends to powerful backends, APIs, and databases for robust web applications." 
+  },
+  { 
+    id: 3, 
+    icon: FaMobile, 
+    title: "Responsive & Cross-Device Apps", 
+    desc: "Websites and apps that adapt seamlessly across devices, ensuring consistent speed and performance everywhere." 
+  },
+  { 
+    id: 4, 
+    icon: FaServer, 
+    title: "Scalable Architecture", 
+    desc: "Designing and deploying systems that scale efficiently, handle traffic growth, and maintain performance under load." 
+  },
+  { 
+    id: 5, 
+    icon: FaCloud, 
+    title: "Cloud & DevOps (AWS/Docker)", 
+    desc: "Deployment and management on AWS cloud, containerization with Docker, and CI/CD pipelines for faster, reliable delivery." 
+  },
+  { 
+    id: 6, 
+    icon: FaDatabase, 
+    title: "Database Management", 
+    desc: "Designing, optimizing, and maintaining SQL/NoSQL databases to ensure secure, efficient, and scalable data handling." 
+  },
 ];
 
 // Navigation Links
@@ -217,34 +248,6 @@ export const testimonials = [
     image: image6,
     name: "Nathaniel Nosa",
     post: "Full-Stack Developer | TypeScript | Django | MERN",
-  },
-];
-
-// ✅ Blog Data
-export const blog = [
-  {
-    id: 1,
-    title: "Master These Awesome",
-    date: "Jun 27, 2022",
-    author: "Dorian Gray",
-    desc: "Lorem Ipsum has been standard. Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been",
-    cover: "./images/blog/b1.png",
-  },
-  {
-    id: 2,
-    title: "Best Design Items to Appeal",
-    date: "Jun 27, 2022",
-    author: "Dorian Gray",
-    desc: "Lorem Ipsum has been standard. Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been",
-    cover: "./images/blog/b2.png",
-  },
-  {
-    id: 3,
-    title: "The 20 Best Lightroom Presets",
-    date: "Jun 27, 2022",
-    author: "Dorian Gray",
-    desc: "Lorem Ipsum has been standard. Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been",
-    cover: "./images/blog/b3.png",
   },
 ];
 
