@@ -55,7 +55,7 @@ const About = () => {
 
   return (
     <motion.section 
-      className="section bg-white"
+      className="section"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}

@@ -30,21 +30,27 @@ const Header = () => {
 
   // hide/show header on scroll
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > lastScrollY) {
+        // scrolling down → hide
         setIsVisible(false);
       } else {
+        // scrolling up → show
         setIsVisible(true);
       }
+      lastScrollY = window.scrollY;
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed w-full px-[20px] lg:px-[40px] mt-4 z-30 h-[70px] lg:h-[60px] flex items-center transition-transform duration-500 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`fixed w-full px-[20px] lg:px-[40px] mt-4 z-30 h-[70px] lg:h-[60px] flex items-center transition-all duration-500 ${
+        isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
     >
       <div className="flex flex-row items-center justify-between w-full">
@@ -55,7 +61,7 @@ const Header = () => {
 
         {/* Nav + Socials grouped */}
         <div className="hidden md:flex items-center gap-x-2">
-          {/* Nav links - REMOVED transparent background and blur */}
+          {/* Nav links */}
           <nav
             className="
               flex gap-x-8 font-semibold 

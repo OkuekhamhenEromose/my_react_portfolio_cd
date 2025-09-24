@@ -21,7 +21,7 @@ const Services = () => {
   };
 
   return (
-    <section className="section bg-gray-50 dark:bg-darkbg transition-colors duration-300">
+    <section className="section dark:bg-darkbg transition-colors duration-300">
       <div className="container mt-12 mx-auto px-4 flex flex-col justify-between h-full py-4">
         {/* Heading */}
         <motion.div

@@ -65,7 +65,7 @@ const Home = () => {
     // home section container
     <motion.section
       id="home"
-      className="section bg-[#f5f7fa] flex items-center"
+      className="section flex items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
@@ -143,7 +143,7 @@ const Home = () => {
           </motion.div>
           {/* Buttons */}
           <motion.div
-            className="mt-4 mb-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            className="mt-4 mb-6 flex sm:flex-row gap-4 justify-center lg:justify-start"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"

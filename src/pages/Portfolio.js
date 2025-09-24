@@ -168,7 +168,7 @@ const Portfolio = () => {
   return (
     <motion.section
       id="portfolio"
-      className="section bg-white flex flex-col justify-center"
+      className="section flex flex-col justify-center"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
