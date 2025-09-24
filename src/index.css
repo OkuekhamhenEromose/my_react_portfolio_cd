@@ -64,13 +64,13 @@
 
   /* Buttons */
   .btn {
-  @apply inline-flex items-center justify-center 
-         px-3 py-2 bg-blue-600 text-white font-medium 
-         rounded-[0_15px_0_15px] 
-         hover:bg-blue-700 transition-colors duration-300 
-         text-sm md:text-base 
-         w-auto; /* 👈 shrink-to-fit */
-}
+    @apply inline-flex items-center justify-center
+      px-3 py-2 bg-blue-600 text-white font-medium
+      rounded-[0_15px_0_15px]
+      hover:bg-blue-700 transition-colors duration-300
+      text-sm md:text-base
+      w-auto; /* 👈 shrink-to-fit */
+  }
 }
 
 /* 🔹 Infinite scrolling animation for skills section */
@@ -90,7 +90,7 @@
 
 @layer components {
   .nav-link {
-    @apply relative text-[#003366] font-medium px-2 transition-all duration-300;
+    @apply relative text-[#003366] font-medium transition-all duration-300;
   }
 
   .dark .nav-link {
@@ -100,25 +100,29 @@
   /* Top bar */
   .nav-link::before {
     content: "";
-    @apply absolute left-0 top-0 w-0 h-[2px] rounded-full;
+    @apply absolute left-0 top-0 h-[2px] rounded-full;
     background: linear-gradient(90deg, #003366, #0066cc);
     box-shadow: 0 0 10px #003366, 0 0 20px #0066cc;
     transition: all 0.4s ease-in-out;
+    width: 0;
+    transform-origin: left;
   }
 
   /* Bottom bar */
   .nav-link::after {
     content: "";
-    @apply absolute right-0 bottom-0 w-0 h-[2px] rounded-full;
+    @apply absolute right-0 bottom-0 h-[2px] rounded-full;
     background: linear-gradient(90deg, #003366, #0066cc);
     box-shadow: 0 0 10px #003366, 0 0 20px #0066cc;
     transition: all 0.4s ease-in-out;
+    width: 0;
+    transform-origin: right;
   }
 
   /* On hover - comet trail effect */
   .nav-link:hover::before,
   .nav-link:hover::after {
-    width: 100%;
+    width: calc(100% - 4px); /* Adjust for padding */
     transform: scaleX(1.05);
     filter: brightness(1.2);
   }
@@ -126,17 +130,40 @@
   /* Active link */
   .nav-link.active::before,
   .nav-link.active::after {
-    width: 100%;
+    width: calc(100% - 4px); /* Adjust for padding */
     transform: scaleX(1.05);
     filter: brightness(1.3);
   }
 
+  /* Social media dropdown animations */
+  .socials-dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+
+  .socials-dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 300ms ease-out;
+  }
+
+  .socials-dropdown-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .socials-dropdown-exit-active {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 200ms ease-in;
+  }
+
   .contact-input {
-    @apply w-full max-w-md px-4 py-3 rounded-md text-gray-800 
-           placeholder-gray-600 border border-gray-300/50 
-           bg-gray-300/30 backdrop-blur-md
-           focus:border-blue-600 focus:outline-none 
-           transition-colors duration-300 text-sm;
+    @apply w-full max-w-md px-4 py-3 rounded-md text-gray-800
+      placeholder-gray-600 border border-gray-300/50
+      bg-gray-300/30 backdrop-blur-md
+      focus:border-blue-600 focus:outline-none
+      transition-colors duration-300 text-sm;
   }
 
   .dark .contact-input {

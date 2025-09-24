@@ -1,31 +1,122 @@
 import React from "react";
 import { ImFacebook, ImTwitter, ImGithub, ImLinkedin } from "react-icons/im";
+import { motion } from "framer-motion";
 
-const Socials = ({ className = "" }) => {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+};
+
+const hoverVariants = {
+  hover: {
+    scale: 1.1,
+    y: -2,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 10,
+    },
+  },
+  tap: {
+    scale: 0.95,
+  },
+};
+
+const Socials = ({ className = "", isVertical = false }) => {
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/eromose.eromose.1",
+      icon: ImFacebook,
+      color: "text-[#3b5998]",
+      label: "Facebook",
+    },
+    {
+      href: "https://x.com/EhiEromoCharles",
+      icon: ImTwitter,
+      color: "text-[#55acee]",
+      label: "Twitter",
+    },
+    {
+      href: "https://github.com/OkuekhamhenEromose",
+      icon: ImGithub,
+      color: "text-[#181616] dark:text-gray-300",
+      label: "GitHub",
+    },
+    {
+      href: "https://www.linkedin.com/in/eromosele-charles-152181337/",
+      icon: ImLinkedin,
+      color: "text-[#007bb6]",
+      label: "LinkedIn",
+    },
+  ];
+
   return (
     <div className={className}>
-      <ul className="flex gap-x-4">
-        <li className="text-[#3b5998] text-xl">
-          <a href="https://www.facebook.com/eromose.eromose.1" target="_blank" rel="noopener noreferrer">
-            <ImFacebook />
-          </a>
-        </li>
-        <li className="text-[#55acee] text-xl">
-          <a href="https://x.com/EhiEromoCharles" target="_blank" rel="noopener noreferrer">
-            <ImTwitter />
-          </a>
-        </li>
-        <li className="text-[#181616] text-xl">
-          <a href="https://github.com/OkuekhamhenEromose" target="_blank" rel="noopener noreferrer">
-            <ImGithub />
-          </a>
-        </li>
-        <li className="text-[#007bb6] text-xl">
-          <a href="https://www.linkedin.com/in/eromosele-charles-152181337/" target="_blank" rel="noopener noreferrer">
-            <ImLinkedin />
-          </a>
-        </li>
-      </ul>
+      <motion.ul
+        className={`flex ${isVertical ? 'flex-col gap-y-2' : 'gap-x-4'}`}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {socialLinks.map((social, index) => {
+          const IconComponent = social.icon;
+          return (
+            <motion.li
+              key={social.label}
+              className={`${social.color} ${isVertical ? 'text-lg' : 'text-xl'}`}
+              variants={itemVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <motion.a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`
+                  ${isVertical 
+                    ? 'flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 w-full' 
+                    : 'block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700'
+                  } 
+                  transition-colors duration-300
+                `}
+                variants={hoverVariants}
+                aria-label={social.label}
+              >
+                <IconComponent />
+                {isVertical && (
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {social.label}
+                  </span>
+                )}
+              </motion.a>
+            </motion.li>
+          );
+        })}
+      </motion.ul>
     </div>
   );
 };

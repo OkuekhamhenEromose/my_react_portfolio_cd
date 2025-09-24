@@ -155,7 +155,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" className="btn text-base md:text-lg">
+              <Link to="/portfolio" className="btn text-base md:text-lg">
                 View My Works
               </Link>
             </motion.a>
