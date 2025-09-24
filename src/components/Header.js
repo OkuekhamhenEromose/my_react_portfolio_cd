@@ -43,25 +43,25 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full px-[20px] lg:px-[40px] z-30 h-[100px] lg:h-[80px] flex items-center transition-transform duration-500 ${
+      className={`fixed w-full px-[20px] lg:px-[40px] mt-4 z-30 h-[70px] lg:h-[60px] flex items-center transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="flex flex-row items-center justify-between w-full">
         {/* Logo */}
-        <Link to={"/"} className="max-w-[60px] mt-4">
+        <Link to={"/"} className="max-w-[60px]">
           <img src={Logo} alt="portfolio-logo" className="w-full" />
         </Link>
 
         {/* Nav + Socials grouped */}
         <div className="hidden md:flex items-center gap-x-2">
-          {/* Nav links */}
+          {/* Nav links - REMOVED transparent background and blur */}
           <nav
             className="
               flex gap-x-8 font-semibold 
               px-12 py-4 rounded-full
-              bg-gray-300/30 backdrop-blur-md shadow-lg
-              dark:bg-gray-800/50
+              bg-white shadow-lg border border-gray-200
+              dark:bg-gray-800 dark:border-gray-700
             "
           >
             <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
@@ -85,15 +85,15 @@ const Header = () => {
           </nav>
 
           {/* Social icons */}
-          <Socials />
+          <Socials className="hidden xl:flex ml-24" />
 
           {/* Theme toggle button */}
           <button
             onClick={toggleTheme}
-            className="ml-8 p-2 rounded-full transition-colors"
+            className="ml-8 p-2 rounded-full bg-white shadow border border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-colors"
           >
             {theme === "light" ? (
-              <Moon className="w-5 h-5 text-gray-800" />
+              <Moon className="w-5 h-5 text-gray-800 dark:text-gray-200" />
             ) : (
               <Sun className="w-5 h-5 text-yellow-400" />
             )}
