@@ -5,16 +5,12 @@ import Counter from "../components/Counter";
 import { motion } from "framer-motion";
 
 const About = () => {
-  // Enhanced animations
   const containerAnimation = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
   };
 
   const zoomIn = {
@@ -22,53 +18,41 @@ const About = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { 
-        duration: 0.8, 
-        ease: [0.25, 0.46, 0.45, 0.94] 
-      }
-    }
+      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    },
   };
 
   const fadeInDown = {
     hidden: { opacity: 0, y: -30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
-      }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
-      }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   return (
-    <motion.section 
+    <motion.section
       className="section"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
       variants={containerAnimation}
     >
-      <div className="container mt-20 mx-auto h-full flex flex-col lg:flex-row items-center justify-center gap-12 text-center lg:text-left px-4">
-        
+      <div
+        className="
+          container mt-20 mx-auto h-full flex flex-col lg:flex-row items-center justify-center 
+          gap-12 text-center lg:text-left px-4
+          max-[375px]:gap-6 max-[375px]:px-3
+        "
+      >
         {/* Image */}
-        <motion.div 
+        <motion.div
           className="w-full lg:w-1/3 flex justify-center"
           variants={zoomIn}
         >
-          <div className="max-w-[450px] sm:max-w-[400px]">
+          <div className="max-w-[450px] sm:max-w-[400px] max-[375px]:max-w-[260px]">
             <img
               src={AbtIMG}
               alt="Charles Eromose"
@@ -78,12 +62,15 @@ const About = () => {
         </motion.div>
 
         {/* Text Content */}
-        <motion.div 
-          className="w-full lg:w-2/3 flex flex-col justify-center items-center lg:items-start"
+        <motion.div
+          className="
+            w-full lg:w-2/3 flex flex-col justify-center items-center lg:items-start
+            max-[375px]:px-2
+          "
           variants={containerAnimation}
         >
           <motion.h1
-            className="h1 mb-4"
+            className="h1 mb-4 max-[375px]:text-2xl"
             variants={fadeInDown}
           >
             About Me
@@ -91,7 +78,7 @@ const About = () => {
 
           <div className="max-w-2xl">
             <motion.p
-              className="mb-4 leading-relaxed text-base"
+              className="mb-4 leading-relaxed text-base max-[375px]:text-sm max-[375px]:leading-snug"
               variants={fadeInUp}
             >
               I'm Charles Eromose Okuekhahmen, a Full Stack Engineer with 4+
@@ -101,9 +88,9 @@ const About = () => {
               secure databases that create real impact.
             </motion.p>
             <motion.p
-              className="mb-6 leading-relaxed text-base"
+              className="mb-6 leading-relaxed text-base max-[375px]:text-sm max-[375px]:leading-snug"
               variants={fadeInUp}
-            transition={{ delay: 0.2 }}
+              transition={{ delay: 0.2 }}
             >
               I enjoy simplifying complex problems into scalable solutions—
               whether through query optimization, secure authentication, or
@@ -117,13 +104,16 @@ const About = () => {
             variants={fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            <Link to={"/portfolio"} className="btn text-base md:text-lg">
+            <Link
+              to={"/portfolio"}
+              className="btn text-base md:text-lg max-[375px]:text-sm max-[375px]:w-full"
+            >
               View My Works
             </Link>
           </motion.div>
 
           {/* Counter Section */}
-          <motion.div 
+          <motion.div
             className="w-full mt-10 mb-6"
             variants={fadeInUp}
             transition={{ delay: 0.6 }}
