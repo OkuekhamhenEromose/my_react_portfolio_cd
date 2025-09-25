@@ -48,12 +48,12 @@ const MobileNav = ({ theme, toggleTheme }) => {
       {/* Theme Toggle Button */}
       <motion.button
         onClick={toggleTheme}
-        className="p-2 rounded-full bg-white dark:bg-gray-800 dark:border-gray-700 transition-colors hover:shadow-lg mr-2"
+        className="p-2 transition-colors hover:shadow-lg rounded-full mr-2 xs:mr-3"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         {theme === "light" ? (
-          <Moon className="w-5 h-5 text-gray-800 dark:text-gray-200" />
+          <Moon className="w-5 h-5 xs:mr-6" />
         ) : (
           <Sun className="w-5 h-5 text-yellow-400" />
         )}
@@ -147,8 +147,13 @@ const MobileNav = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Social Icons - Bottom */}
-        <div className="flex justify-center">
-          <Socials className="flex gap-4" />
+        <div className="flex justify-center items-center py-6 xs:py-8 px-4">
+          <div className="text-center">
+            <p className="text-md font-semibold xs:text-base text-[#003366] dark:text-gray-400 mb-3 xs:mb-4">
+              Connect with me
+            </p>
+            <Socials className="flex justify-center" />
+          </div>
         </div>
       </motion.div>
     </nav>
