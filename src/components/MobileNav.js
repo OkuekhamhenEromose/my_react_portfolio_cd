@@ -151,10 +151,10 @@ const MobileNav = ({ theme, toggleTheme }) => {
         {/* Social Icons - Bottom */}
         <div className="flex justify-center items-center py-6 px-4 w-full">
           <div className="text-center w-full">
-            <p className="text-sm font-semibold text-[#003366] dark:text-gray-400 mb-2">
+            <p className="text-sm font-semibold text-[#003366] dark:text-gray-400 mb-4">
               Connect with me
             </p>
-            <Socials className="flex flex-wrap justify-center gap-2" />
+            <Socials className="flex justify-center gap-3" />
           </div>
         </div>
       </motion.div>
