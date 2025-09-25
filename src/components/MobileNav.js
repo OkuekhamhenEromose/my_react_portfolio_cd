@@ -77,10 +77,11 @@ const MobileNav = ({ theme, toggleTheme }) => {
         variants={menuVariants}
         initial="hidden"
         animate={openMenu ? "show" : "hidden"}
-        className="bg-white dark:bg-gray-800 w-full absolute top-0 right-0 max-w-xs h-screen z-50 dark:border-gray-700 flex flex-col justify-between shadow-lg"
+        className="bg-white dark:bg-gray-800 w-full absolute top-0 right-0 max-w-xs h-screen 
+                   z-[60] dark:border-gray-700 flex flex-col justify-between shadow-lg"
       >
         {/* Close Icon and Theme Toggle */}
-        <div className="absolute top-6 right-6 flex items-center gap-3 z-[60]">
+        <div className="absolute top-6 right-6 flex items-center gap-3 z-[70]">
           {/* Theme Toggle inside menu */}
           <motion.button
             onClick={toggleTheme}
@@ -98,7 +99,8 @@ const MobileNav = ({ theme, toggleTheme }) => {
           {/* Close Icon */}
           <motion.div
             onClick={() => setOpenMenu(false)}
-            className="text-[#003366] dark:text-gray-200 cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors duration-200"
+            className="text-[#003366] dark:text-gray-200 cursor-pointer p-2 hover:bg-gray-100 
+                       dark:hover:bg-gray-700 rounded-full transition-colors duration-200"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -151,10 +153,10 @@ const MobileNav = ({ theme, toggleTheme }) => {
         </div>
       </motion.div>
 
-      {/* Backdrop (AFTER sidebar so it doesn’t block close button) */}
+      {/* Backdrop */}
       {openMenu && (
         <motion.div
-          className="fixed inset-0 z-40 bg-black/40"
+          className="fixed inset-0 z-50 bg-black/40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
