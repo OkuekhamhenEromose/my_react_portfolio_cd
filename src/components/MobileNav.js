@@ -22,12 +22,14 @@ const MobileNav = ({ theme, toggleTheme }) => {
         setOpenMenu(false);
       }
     };
+
     if (openMenu) {
       document.addEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "unset";
@@ -69,26 +71,16 @@ const MobileNav = ({ theme, toggleTheme }) => {
         <Menu />
       </motion.div>
 
-      {/* Backdrop */}
-      {openMenu && (
-        <motion.div
-          className="fixed inset-0 z-40"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        />
-      )}
-
       {/* Sidebar Menu */}
       <motion.div
         ref={menuRef}
         variants={menuVariants}
         initial="hidden"
         animate={openMenu ? "show" : "hidden"}
-        className="bg-white dark:bg-gray-800 w-full absolute top-0 right-0 max-w-xs h-screen z-50 dark:border-gray-700 flex flex-col justify-between"
+        className="bg-white dark:bg-gray-800 w-full absolute top-0 right-0 max-w-xs h-screen z-50 dark:border-gray-700 flex flex-col justify-between shadow-lg"
       >
         {/* Close Icon and Theme Toggle */}
-        <div className="absolute top-6 right-6 flex items-center gap-3">
+        <div className="absolute top-6 right-6 flex items-center gap-3 z-[60]">
           {/* Theme Toggle inside menu */}
           <motion.button
             onClick={toggleTheme}
@@ -126,7 +118,9 @@ const MobileNav = ({ theme, toggleTheme }) => {
               <motion.li
                 key={item.name}
                 initial={{ opacity: 0, x: 20 }}
-                animate={openMenu ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                animate={
+                  openMenu ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+                }
                 transition={{ delay: 0.3 + index * 0.1 }}
                 className="flex justify-center"
               >
@@ -151,8 +145,19 @@ const MobileNav = ({ theme, toggleTheme }) => {
           <Socials className="flex" />
         </div>
       </motion.div>
+
+      {/* Backdrop (AFTER sidebar so it doesn’t block close button) */}
+      {openMenu && (
+        <motion.div
+          className="fixed inset-0 z-40 bg-black/40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setOpenMenu(false)}
+        />
+      )}
     </nav>
   );
-}
+};
 
 export default MobileNav;
