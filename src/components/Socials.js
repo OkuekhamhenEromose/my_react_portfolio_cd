@@ -78,7 +78,7 @@ const Socials = ({ className = "", isVertical = false }) => {
     <div className={className}>
       <motion.ul
         className={`flex flex-wrap ${
-          isVertical ? "flex-col gap-y-2" : "gap-x-2 xs:gap-x-3"
+          isVertical ? "flex-col gap-y-2" : "gap-x-2"
         } items-center justify-center`}
         variants={containerVariants}
         initial="hidden"
