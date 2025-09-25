@@ -77,7 +77,9 @@ const Socials = ({ className = "", isVertical = false }) => {
   return (
     <div className={className}>
       <motion.ul
-        className={`flex ${isVertical ? 'flex-col gap-y-2' : 'gap-x-3 xs:gap-x-4'} items-center`}
+        className={`flex flex-wrap ${
+          isVertical ? "flex-col gap-y-2" : "gap-x-2 xs:gap-x-3"
+        } items-center justify-center`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -97,9 +99,10 @@ const Socials = ({ className = "", isVertical = false }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
-                  ${isVertical 
-                    ? 'flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-base' 
-                    : 'block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-lg xs:text-xl'
+                  ${
+                    isVertical
+                      ? "flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-base"
+                      : "block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-lg xs:text-xl"
                   } 
                   transition-colors duration-300
                 `}

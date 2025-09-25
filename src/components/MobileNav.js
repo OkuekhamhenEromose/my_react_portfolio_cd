@@ -126,7 +126,9 @@ const MobileNav = ({ theme, toggleTheme }) => {
               <motion.li
                 key={item.name}
                 initial={{ opacity: 0, x: 20 }}
-                animate={openMenu ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                animate={
+                  openMenu ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+                }
                 transition={{ delay: 0.3 + index * 0.1 }}
                 className="flex justify-center"
               >
@@ -148,16 +150,16 @@ const MobileNav = ({ theme, toggleTheme }) => {
 
         {/* Social Icons - Bottom */}
         <div className="flex justify-center items-center py-6 xs:py-8 px-4">
-          <div className="text-center">
-            <p className="text-md font-semibold xs:text-base text-[#003366] dark:text-gray-400 mb-3 xs:mb-4">
+          <div className="w-full text-center">
+            <p className="text-sm xs:text-base font-semibold text-[#003366] dark:text-gray-400 mb-3 xs:mb-4">
               Connect with me
             </p>
-            <Socials className="flex justify-center" />
+            <Socials className="flex justify-center flex-wrap gap-2 xs:gap-3" />
           </div>
         </div>
       </motion.div>
     </nav>
   );
-}
+};
 
 export default MobileNav;
