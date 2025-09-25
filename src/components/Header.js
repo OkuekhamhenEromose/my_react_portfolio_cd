@@ -68,18 +68,18 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full px-[16px] md:px-[24px] lg:px-[40px] mt-4 z-30 h-[70px] lg:h-[60px] flex items-center transition-all duration-500 ${
+      className={`fixed w-full px-3 sm:px-4 md:px-6 lg:px-10 mt-3 z-30 h-[64px] lg:h-[60px] flex items-center transition-all duration-500 ${
     isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
   }`}
     >
       <div className="flex flex-row items-center justify-between w-full max-w-7xl mx-auto">
         {/* Logo */}
-        <Link to={"/"} className="max-w-[50px] md:max-w-[55px] lg:max-w-[60px] xl:max-w-[65px]">
+        <Link to={"/"} className="max-w-[44px] sm:max-w-[50px] md:max-w-[55px] lg:max-w-[60px]">
       <img src={Logo} alt="portfolio-logo" className="w-full" />
     </Link>
 
         {/* Nav + Socials grouped */}
-        <div className="hidden md:flex items-center gap-x-2 md:gap-x-7 lg:gap-x-6 xl:gap-x-12 relative">
+        <div className="hidden md:flex items-center gap-x-3 md:gap-x-6 lg:gap-x-8 relative">
           {/* Nav links */}
           <nav
             className="
@@ -162,7 +162,7 @@ const Header = () => {
         </div>
 
         {/* MobileNav only below md */}
-        <div className="md:hidden flex justify-end">
+        <div className="md:hidden flex items-center gap-2">
           <MobileNav theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>

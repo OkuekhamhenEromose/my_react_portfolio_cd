@@ -62,7 +62,7 @@ const MobileNav = ({ theme, toggleTheme }) => {
       {/* Menu Icon */}
       <motion.div
         onClick={() => setOpenMenu(true)}
-        className="text-3xl cursor-pointer flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+        className="cursor-pointer flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -147,8 +147,8 @@ const MobileNav = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Social Icons - Bottom */}
-        <div className="flex justify-center items-center py-10">
-          <Socials className="flex" />
+        <div className="flex justify-center">
+          <Socials className="flex gap-4" />
         </div>
       </motion.div>
     </nav>
