@@ -149,9 +149,9 @@ const MobileNav = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Social Icons - Bottom */}
-        <div className="flex justify-center items-center py-6 px-4 w-full">
+        <div className="flex justify-center items-center py-6 px-4 mb-20 w-full">
           <div className="text-center w-full">
-            <p className="text-sm font-semibold text-[#003366] dark:text-gray-400 mb-4">
+            <p className="text-sm font-semibold text-[#003366] dark:text-gray-400 mb-2">
               Connect with me
             </p>
             <Socials className="flex justify-center gap-3" />
