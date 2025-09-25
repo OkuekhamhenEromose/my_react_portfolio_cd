@@ -130,14 +130,15 @@ const Contact = () => {
     >
       <div className="container mx-auto px-4 pt-12">
         {/* Message Notification */}
+        {/* Message Notification */}
         {message.text && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`fixed top-4 right-4 z-50 px-3 py-2 rounded-md shadow-md max-w-sm text-sm font-medium flex items-center ${
+            className={`fixed right-4 z-50 px-3 py-2 rounded-md shadow-md max-w-sm text-sm font-medium flex items-center ${
               message.type === "success" ? "bg-green-400" : "bg-red-400"
             }`}
-            style={{ color: "#003366" }}
+            style={{ color: "#003366", top: "100px" }} // ← moved down by 170px
           >
             {message.type === "success" ? (
               <CheckCircle className="w-4 h-4 mr-2" />
