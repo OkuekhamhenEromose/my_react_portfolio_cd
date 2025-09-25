@@ -50,12 +50,12 @@ const MobileNav = ({ theme, toggleTheme }) => {
       {/* Theme Toggle Button */}
       <motion.button
         onClick={toggleTheme}
-        className="p-2 rounded-full bg-white dark:bg-gray-800 dark:border-gray-700 transition-colors hover:shadow-lg mr-2"
+        className="p-2 transition-colors hover:shadow-lg rounded-full mr-2 xs:mr-3"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         {theme === "light" ? (
-          <Moon className="w-5 h-5 text-gray-800 dark:text-gray-200" />
+          <Moon className="w-5 h-5 xs:mr-6" />
         ) : (
           <Sun className="w-5 h-5 text-yellow-400" />
         )}
@@ -64,7 +64,7 @@ const MobileNav = ({ theme, toggleTheme }) => {
       {/* Menu Icon */}
       <motion.div
         onClick={() => setOpenMenu(true)}
-        className="text-3xl cursor-pointer flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+        className="cursor-pointer flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -141,8 +141,13 @@ const MobileNav = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Social Icons - Bottom */}
-        <div className="flex justify-center items-center py-10">
-          <Socials className="flex" />
+        <div className="flex justify-center items-center py-6 px-4 mb-20 w-full">
+          <div className="text-center w-full">
+            <p className="text-sm font-semibold text-[#003366] dark:text-gray-400 mb-2">
+              Connect with me
+            </p>
+            <Socials className="flex justify-center gap-3" />
+          </div>
         </div>
       </motion.div>
 

@@ -77,7 +77,7 @@ const Socials = ({ className = "", isVertical = false }) => {
   return (
     <div className={className}>
       <motion.ul
-        className={`flex ${isVertical ? 'flex-col gap-y-2' : 'gap-x-4'}`}
+        className={`flex ${isVertical ? "flex-col gap-y-2" : "gap-x-3"} items-center justify-center`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -87,7 +87,7 @@ const Socials = ({ className = "", isVertical = false }) => {
           return (
             <motion.li
               key={social.label}
-              className={`${social.color} ${isVertical ? 'text-lg' : 'text-xl'}`}
+              className={social.color}
               variants={itemVariants}
               whileHover="hover"
               whileTap="tap"
@@ -97,16 +97,17 @@ const Socials = ({ className = "", isVertical = false }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
-                  ${isVertical 
-                    ? 'flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 w-full' 
-                    : 'block p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ${
+                    isVertical 
+                      ? "flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 w-full" 
+                      : "flex items-center justify-center p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
                   } 
                   transition-colors duration-300
                 `}
                 variants={hoverVariants}
                 aria-label={social.label}
               >
-                <IconComponent />
+                <IconComponent className="text-2xl" />
                 {isVertical && (
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     {social.label}

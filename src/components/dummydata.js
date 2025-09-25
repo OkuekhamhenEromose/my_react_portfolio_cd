@@ -5,14 +5,7 @@ import {
   FaServer, 
   FaCloud, 
   FaCode,  
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
   FaDatabase,
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaYoutube
 } from 'react-icons/fa';
 
 
@@ -35,14 +28,14 @@ import Image6 from "../img/portfolio/portfolio-img.png";
 export const project = [
   {
     id: 1,
-    icon: <FaCloud className="text-[#003366] text-3xl" />,
-    num: 89,
+    icon: <FaHeart className="text-[#003366] text-3xl" />,
+    num: 65,
     title: "HAPPY CLIENTS",
   },
   {
     id: 2,
-    icon: <FaHeart className="text-[#003366] text-3xl" />,
-    num: 231,
+    icon: <FaUser className="text-[#003366] text-3xl" />,
+    num: 101,
     title: "PROJECTS COMPLETED",
   },
   {
@@ -53,7 +46,7 @@ export const project = [
   },
   {
     id: 4,
-    icon: <FaUser className="text-[#003366] text-3xl" />,
+    icon: <FaCloud className="text-[#003366] text-3xl" />,
     num: 1446,
     title: "LINES OF CODE",
   },
@@ -128,8 +121,8 @@ export const projectCategories = [
 
 // Statistics
 export const statistics = [
-  { id: 1, num: 89, title: "HAPPY CLIENTS" },
-  { id: 2, num: 231, title: "PROJECTS COMPLETED" },
+  { id: 1, num: 65, title: "HAPPY CLIENTS" },
+  { id: 2, num: 101, title: "PROJECTS COMPLETED" },
   { id: 3, num: 108, title: "FILES DOWNLOADED" },
   { id: 4, num: 1446, title: "LINES OF CODE" },
 ];
@@ -249,19 +242,4 @@ export const testimonials = [
     name: "Nathaniel Nosa",
     post: "Full-Stack Developer | TypeScript | Django | MERN",
   },
-];
-
-// Contact Data
-export const contact = [
-  { icon: FaMapMarkerAlt, text1: "123 Developer Street", text2: "Lagos, Nigeria" },
-  { icon: FaPhone, text1: "+234 812 3456 789", text2: "+234 907 6543 210" },
-  { icon: FaEnvelope, text1: "hello@charleseromose.com", text2: "info@charleseromose.com" },
-];
-
-// Social Links
-export const social = [
-  { icon: FaFacebook },
-  { icon: FaTwitter },
-  { icon: FaInstagram },
-  { icon: FaYoutube },
 ];
