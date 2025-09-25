@@ -65,10 +65,12 @@ const Home = () => {
 
           <motion.h1
             className="
-              text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-              font-bold text-gray-800 mb-2 sm:mb-3 lg:mb-4 leading-tight
-              max-[375px]:text-xl max-[375px]:leading-snug
-            "
+    text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+    font-bold text-gray-800 mb-2 sm:mb-3 lg:mb-4 leading-tight
+    max-[375px]:text-xl max-[375px]:leading-snug
+    whitespace-nowrap
+    break-words-0
+  "
             variants={fadeInDown}
           >
             I'm <span className="text-[#003366]">Charles Eromose</span>,
