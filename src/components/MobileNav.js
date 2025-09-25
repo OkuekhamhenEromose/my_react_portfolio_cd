@@ -22,14 +22,12 @@ const MobileNav = ({ theme, toggleTheme }) => {
         setOpenMenu(false);
       }
     };
-
     if (openMenu) {
       document.addEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "unset";
@@ -50,12 +48,12 @@ const MobileNav = ({ theme, toggleTheme }) => {
       {/* Theme Toggle Button */}
       <motion.button
         onClick={toggleTheme}
-        className="p-2 transition-colors hover:shadow-lg rounded-full mr-2 xs:mr-3"
+        className="p-2 rounded-full bg-white dark:bg-gray-800 dark:border-gray-700 transition-colors hover:shadow-lg mr-2"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         {theme === "light" ? (
-          <Moon className="w-5 h-5 xs:mr-6" />
+          <Moon className="w-5 h-5 text-gray-800 dark:text-gray-200" />
         ) : (
           <Sun className="w-5 h-5 text-yellow-400" />
         )}
@@ -64,12 +62,22 @@ const MobileNav = ({ theme, toggleTheme }) => {
       {/* Menu Icon */}
       <motion.div
         onClick={() => setOpenMenu(true)}
-        className="cursor-pointer flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+        className="text-3xl cursor-pointer flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         <Menu />
       </motion.div>
+
+      {/* Backdrop */}
+      {openMenu && (
+        <motion.div
+          className="fixed inset-0 z-40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
+      )}
 
       {/* Sidebar Menu */}
       <motion.div
@@ -77,8 +85,7 @@ const MobileNav = ({ theme, toggleTheme }) => {
         variants={menuVariants}
         initial="hidden"
         animate={openMenu ? "show" : "hidden"}
-        className="bg-white dark:bg-gray-800 w-full absolute top-0 right-0 max-w-xs h-screen 
-                   z-[60] dark:border-gray-700 flex flex-col justify-between shadow-lg"
+        className="bg-white dark:bg-gray-800 w-full absolute top-0 right-0 max-w-xs h-screen z-[60] dark:border-gray-700 flex flex-col justify-between"
       >
         {/* Close Icon and Theme Toggle */}
         <div className="absolute top-6 right-6 flex items-center gap-3 z-[70]">
@@ -99,8 +106,7 @@ const MobileNav = ({ theme, toggleTheme }) => {
           {/* Close Icon */}
           <motion.div
             onClick={() => setOpenMenu(false)}
-            className="text-[#003366] dark:text-gray-200 cursor-pointer p-2 hover:bg-gray-100 
-                       dark:hover:bg-gray-700 rounded-full transition-colors duration-200"
+            className="text-[#003366] dark:text-gray-200 cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors duration-200"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -143,17 +149,10 @@ const MobileNav = ({ theme, toggleTheme }) => {
         </div>
 
         {/* Social Icons - Bottom */}
-        <div className="flex justify-center items-center py-6 px-4 mb-20 w-full">
-          <div className="text-center w-full">
-            <p className="text-sm font-semibold text-[#003366] dark:text-gray-400 mb-2">
-              Connect with me
-            </p>
-            <Socials className="flex justify-center gap-3" />
-          </div>
+        <div className="flex justify-center items-center py-10">
+          <Socials className="flex" />
         </div>
       </motion.div>
-
-      {/* Backdrop */}
       {openMenu && (
         <motion.div
           className="fixed inset-0 z-50 bg-black/40"
