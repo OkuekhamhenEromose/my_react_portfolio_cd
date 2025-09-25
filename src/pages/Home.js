@@ -25,7 +25,11 @@ const fadeInDown = {
 };
 const zoomIn = {
   initial: { opacity: 0, scale: 0.4 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 2.0, ease: "easeOut" } },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 2.0, ease: "easeOut" },
+  },
 };
 
 const Home = () => {
@@ -72,19 +76,30 @@ const Home = () => {
 
           {/* Code Block */}
           <motion.div
-            className="w-full max-w-lg sm:max-w-[90%] md:max-w-4xl lg:max-w-5xl"
+            className="
+    w-full 
+    max-w-lg sm:max-w-[90%] md:max-w-4xl lg:max-w-5xl 
+    max-[375px]:max-w-[90%] max-[375px]:mx-auto
+  "
             variants={zoomIn}
           >
-            <div className="code-display overflow-x-auto rounded-lg max-[375px]:p-1">
+            <div
+              className="
+      code-display overflow-x-auto rounded-lg
+      max-[375px]:p-2 max-[375px]:bg-slate-800/90
+    "
+            >
               <SyntaxHighlighter
                 language="typescript"
                 customStyle={{
                   margin: 0,
-                  borderRadius: "12px",
+                  borderRadius: "10px",
                   background: "rgba(30, 41, 59, 0.95)",
                   backdropFilter: "blur(10px)",
-                  fontSize: "0.75rem", // default small font
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+                  fontSize: "0.7rem", // smaller font for 375px
+                  lineHeight: "1.2rem", // tighter spacing
+                  padding: "0.75rem",
+                  boxShadow: "0 8px 18px rgba(0,0,0,0.15)",
                   whiteSpace: "pre",
                 }}
                 style={vscDarkPlus}
@@ -92,7 +107,7 @@ const Home = () => {
               >
                 {`const aboutMe: DeveloperProfile = {
   name: "Charles Eromose",
-  role: "Full Stack Engineer", 
+  role: "Full Stack Engineer",
   experience: "4+ years",
   stack: {
     frontend: ["React.js", "TailwindCSS", "Next.js", "TypeScript"],
@@ -100,11 +115,7 @@ const Home = () => {
     database: ["PostgreSQL", "MySQL", "SQL Server"],
     cloud: ["AWS", "Vercel", "Netlify"]
   },
-  skills: [
-    "UI/UX design", 
-    "API development", 
-    "cloud solutions"
-  ],
+  skills: ["UI/UX design", "API development", "cloud solutions"],
   availability: "Open to opportunities 🚀"
 };`}
               </SyntaxHighlighter>
@@ -116,7 +127,11 @@ const Home = () => {
             className="mt-4 mb-6 flex sm:flex-row gap-4 justify-center lg:justify-start max-[375px]:flex-col max-[375px]:gap-2"
             variants={staggerContainer}
           >
-            <motion.a variants={fadeInUpBounce} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.a
+              variants={fadeInUpBounce}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Link
                 to="/portfolio"
                 className="btn text-sm sm:text-base md:text-lg px-4 py-2 max-[375px]:w-full"
@@ -137,7 +152,9 @@ const Home = () => {
               "
             >
               <span className="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 ease-linear group-hover:w-full"></span>
-              <span className="relative z-10 group-hover:text-white">Download CV</span>
+              <span className="relative z-10 group-hover:text-white">
+                Download CV
+              </span>
             </motion.button>
           </motion.div>
         </motion.div>
