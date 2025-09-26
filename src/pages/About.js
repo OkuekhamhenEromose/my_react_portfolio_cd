@@ -1,6 +1,6 @@
 import React from "react";
 import AbtIMG from "../img/about/IMG_8173.JPG";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import Counter from "../components/Counter";
 import { motion } from "framer-motion";
 
@@ -105,8 +105,8 @@ const About = () => {
             transition={{ delay: 0.4 }}
           >
             <Link
-              to={"/portfolio"}
-              className="btn text-base md:text-lg max-[375px]:text-sm max-[375px]:w-full"
+              to={"/services"}
+              className=" cursor-pointer btn text-base md:text-lg max-[375px]:text-sm max-[375px]:w-full"
             >
               View My Works
             </Link>
