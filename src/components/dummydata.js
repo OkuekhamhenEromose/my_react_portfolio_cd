@@ -22,6 +22,7 @@ import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
 import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
 import Image6 from "../img/portfolio/portfolio-img.png";
+import Image7 from "../img/portfolio/ethahospital.png"
 
 
 // Stats Project Data
@@ -108,12 +109,21 @@ export const portfolioProjects = [
     demoLink: "https://subtle-blini-446f27.netlify.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
   },
+  {
+    id: 7,
+    title: "EthaHospital App",
+    description: "Etta-Atlantic Memorial Hospital clone mimicking the great hospital website in design and animation.",
+    category: "Frontend",
+    image: Image7,
+    demoLink: "https://ettahospitalclone.vercel.app/",
+    githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact",
+  },
 ];
 
 // ✅ Categories aligned with "category" field above
 export const projectCategories = [
   { id: "all", name: "All Projects", count: 6 },
-  { id: "Frontend", name: "Frontend", count: 3 },
+  { id: "Frontend", name: "Frontend", count: 4 },
   { id: "Backend", name: "Backend", count: 2 },
   { id: "Full-Stack", name: "Full-Stack", count: 1 },
 ];
