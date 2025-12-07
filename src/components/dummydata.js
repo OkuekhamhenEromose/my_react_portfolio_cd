@@ -24,7 +24,6 @@ import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
 import Image6 from "../img/portfolio/portfolio-img.png";
 import Image7 from "../img/portfolio/ethahospital.png"
 
-
 // Stats Project Data
 export const project = [
   {
