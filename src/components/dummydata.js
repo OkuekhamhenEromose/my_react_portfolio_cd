@@ -82,7 +82,7 @@ export const portfolioProjects = [
   //   githubLink: "https://github.com/OkuekhamhenEromose/housing_properties",
   // },
   {
-    id: 3,
+    id: 1,
     title: "Real Estate Website",
     description: "Property listings app for buying or renting homes. Featuring search, filters, and a clean UI.",
     category: "Frontend",
@@ -91,7 +91,7 @@ export const portfolioProjects = [
     githubLink: "https://github.com/OkuekhamhenEromose/RealEstateModern",
   },
   {
-    id: 4,
+    id: 2,
     title: "CH-Travels",
     description: "A modern travel agency app that helps users explore destinations and book trips.",
     category: "Frontend",
@@ -109,7 +109,7 @@ export const portfolioProjects = [
   //   githubLink: "https://github.com/OkuekhamhenEromose/myresume",
   // },
   {
-    id: 6,
+    id: 3,
     title: "CHBlog App",
     description: "Full-Stack blog app with authentication, post management, and modern UI.",
     category: "Full-Stack",
@@ -118,7 +118,7 @@ export const portfolioProjects = [
     githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
   },
   {
-    id: 7,
+    id: 4,
     title: "EthaHospital App",
     description: "Etta-Atlantic Memorial Hospital clone mimicking the great hospital website in design and animation.",
     category: "Frontend",
@@ -127,7 +127,7 @@ export const portfolioProjects = [
     githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact",
   },
   {
-    id: 8,
+    id: 5,
     title: "EthaHospital Backend",
     description: "EthaHospital backend project that has the API for the frontend project",
     category: "Backend",
@@ -136,13 +136,22 @@ export const portfolioProjects = [
     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
   },
   {
-    id: 9,
+    id: 6,
     title: "EthaHospital Backend",
     description: "EthaHospital backend project that has the API for the frontend project",
     category: "Full-Stack",
     image: Image7,
     demoLink: "https://dhospitalback.onrender.com/",
     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
+  },
+  {
+    id: 7,
+    title: "Portfolio",
+    description: "A personal portfolio website showcasing my skills, projects, and contact information.",
+    category: "Frontend",
+    image: Image7,
+    demoLink: "https://timely-axolotl-0f4be3.netlify.app/",
+    githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
   },
 ];
 
