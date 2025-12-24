@@ -11,6 +11,8 @@ import logo4 from "../img/logo/google.png";
 import logo5 from "../img/logo/linkedin.png";
 import logo6 from "../img/logo/paystack.png";
 import { motion } from "framer-motion";
+// import Image6 from "../img/portfolio/resumebuilder.png"
+
 
 const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(0);
