@@ -17,7 +17,7 @@ import image5 from "../img/testimonials/michaelojemoron.jpeg";
 import image6 from "../img/testimonials/nathanielnosa.jpeg";
 
 // import Image1 from "../img/portfolio/insomnia1.png";
-import Image2 from "../img/portfolio/insomnia2.png";
+import Image1 from "../img/portfolio/portfolio-img.png";
 import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
 import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
@@ -59,10 +59,19 @@ export const portfolioProjects = [
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my skills, projects, and contact information.",
     category: "Frontend",
-    image: Image6,
+    image: Image1,
     demoLink: "https://timely-axolotl-0f4be3.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
   },
+  // {
+  //   id: 1,
+  //   title: "Portfolio Website",
+  //   description: "A personal portfolio website showcasing my skills, projects, and contact information.",
+  //   category: "Frontend",
+  //   image: Image6,
+  //   demoLink: "https://timely-axolotl-0f4be3.netlify.app",
+  //   githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
+  // },
   // {
   //   id: 2,
   //   title: "Listings App",
