@@ -17,12 +17,12 @@ import image5 from "../img/testimonials/michaelojemoron.jpeg";
 import image6 from "../img/testimonials/nathanielnosa.jpeg";
 
 // import Image1 from "../img/portfolio/insomnia1.png";
-// import Image1 from "../img/portfolio/portfolio-img.png";
+import Image7 from "../img/portfolio/portfolio.png";
 import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
 import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
 // import Image6 from "../img/portfolio-img.png";
-import Image7 from "../img/portfolio/ethahospital.png"
+import Image1 from "../img/portfolio/ethahospital.png"
 
 // Stats Project Data
 export const project = [
@@ -131,7 +131,7 @@ export const portfolioProjects = [
     title: "EthaHospital Backend",
     description: "EthaHospital backend project that has the API for the frontend project",
     category: "Backend",
-    image: Image7,
+    image: Image1,
     demoLink: "https://dhospitalback.onrender.com/api/",
     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
   },
@@ -140,7 +140,7 @@ export const portfolioProjects = [
     title: "EthaHospital Backend",
     description: "EthaHospital backend project that has the API for the frontend project",
     category: "Full-Stack",
-    image: Image7,
+    image: Image1,
     demoLink: "https://dhospitalback.onrender.com/",
     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
   },
