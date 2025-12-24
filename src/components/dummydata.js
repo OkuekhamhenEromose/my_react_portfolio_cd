@@ -54,15 +54,15 @@ export const project = [
 
 // Portfolio Projects (Detailed)
 export const portfolioProjects = [
-  // {
-  //   id: 1,
-  //   title: "Portfolio Website",
-  //   description: "A personal portfolio website showcasing my skills, projects, and contact information.",
-  //   category: "Frontend",
-  //   image: Image6,
-  //   demoLink: "https://timely-axolotl-0f4be3.netlify.app",
-  //   githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
-  // },
+  {
+    id: 1,
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing my skills, projects, and contact information.",
+    category: "Frontend",
+    image: Image6,
+    demoLink: "https://timely-axolotl-0f4be3.netlify.app",
+    githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
+  },
   // {
   //   id: 2,
   //   title: "Listings App",
