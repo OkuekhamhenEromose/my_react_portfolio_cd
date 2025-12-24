@@ -17,11 +17,11 @@ import image5 from "../img/testimonials/michaelojemoron.jpeg";
 import image6 from "../img/testimonials/nathanielnosa.jpeg";
 
 // import Image1 from "../img/portfolio/insomnia1.png";
-import Image1 from "../img/portfolio/portfolio-img.png";
+// import Image1 from "../img/portfolio/portfolio-img.png";
 import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
 import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
-import Image6 from "../img/portfolio/portfolio-img.png";
+// import Image6 from "../img/portfolio/portfolio-img.png";
 import Image7 from "../img/portfolio/ethahospital.png"
 
 // Stats Project Data
