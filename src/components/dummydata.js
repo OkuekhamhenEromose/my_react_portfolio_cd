@@ -139,7 +139,7 @@ export const portfolioProjects = [
 
 // ✅ Categories aligned with "category" field above
 export const projectCategories = [
-  { id: "all", name: "All Projects", count: 9 },
+  { id: "all", name: "All Projects", count: 8 },
   { id: "Frontend", name: "Frontend", count: 4 },
   { id: "Backend", name: "Backend", count: 3 },
   { id: "Full-Stack", name: "Full-Stack", count: 2 },
