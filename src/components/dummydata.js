@@ -22,7 +22,7 @@ import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
 import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
 
-// import Image6 from "../img/portfolio-img.png";
+import Image6 from "../img/portfolio/insomnia2.png";
 import Image1 from "../img/portfolio/ethahospital.png"
 
 // Stats Project Data
@@ -82,15 +82,15 @@ export const portfolioProjects = [
     demoLink: "https://shiny-scone-6fc98c.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/chardevtravel",
   },
-  // {
-  //   id: 5,
-  //   title: "Resume Builder",
-  //   description: "Resume generation web app with backend support for user data and storage.",
-  //   category: "Backend",
-  //   image: Image1,
-  //   demoLink: "https://renewschool-1.onrender.com",
-  //   githubLink: "https://github.com/OkuekhamhenEromose/myresume",
-  // },
+  {
+    id: 5,
+    title: "Resume Builder",
+    description: "Resume generation web app with backend support for user data and storage.",
+    category: "Backend",
+    image: Image6,
+    demoLink: "https://renewschool-1.onrender.com",
+    githubLink: "https://github.com/OkuekhamhenEromose/myresume",
+  },
   {
     id: 3,
     title: "CHBlog App",
