@@ -16,7 +16,7 @@ import image4 from "../img/testimonials/samuelokpe.jpeg";
 import image5 from "../img/testimonials/michaelojemoron.jpeg";
 import image6 from "../img/testimonials/nathanielnosa.jpeg";
 
-import Image1 from "../img/portfolio/insomnia1.png";
+// import Image1 from "../img/portfolio/insomnia1.png";
 import Image2 from "../img/portfolio/insomnia2.png";
 import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
@@ -90,15 +90,15 @@ export const portfolioProjects = [
     demoLink: "https://shiny-scone-6fc98c.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/chardevtravel",
   },
-  {
-    id: 5,
-    title: "Resume Builder",
-    description: "Resume generation web app with backend support for user data and storage.",
-    category: "Backend",
-    image: Image1,
-    demoLink: "https://renewschool-1.onrender.com",
-    githubLink: "https://github.com/OkuekhamhenEromose/myresume",
-  },
+  // {
+  //   id: 5,
+  //   title: "Resume Builder",
+  //   description: "Resume generation web app with backend support for user data and storage.",
+  //   category: "Backend",
+  //   image: Image1,
+  //   demoLink: "https://renewschool-1.onrender.com",
+  //   githubLink: "https://github.com/OkuekhamhenEromose/myresume",
+  // },
   {
     id: 6,
     title: "CHBlog App",
@@ -117,14 +117,32 @@ export const portfolioProjects = [
     demoLink: "https://ettahospitalclone.vercel.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact",
   },
+  {
+    id: 8,
+    title: "EthaHospital Backend",
+    description: "EthaHospital backend project that has the API for the frontend project",
+    category: "Backend",
+    image: Image7,
+    demoLink: "https://dhospitalback.onrender.com/api/",
+    githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
+  },
+  {
+    id: 9,
+    title: "EthaHospital Backend",
+    description: "EthaHospital backend project that has the API for the frontend project",
+    category: "Full-Stack",
+    image: Image7,
+    demoLink: "https://dhospitalback.onrender.com/",
+    githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
+  },
 ];
 
 // ✅ Categories aligned with "category" field above
 export const projectCategories = [
-  { id: "all", name: "All Projects", count: 6 },
+  { id: "all", name: "All Projects", count: 9 },
   { id: "Frontend", name: "Frontend", count: 4 },
-  { id: "Backend", name: "Backend", count: 2 },
-  { id: "Full-Stack", name: "Full-Stack", count: 1 },
+  { id: "Backend", name: "Backend", count: 3 },
+  { id: "Full-Stack", name: "Full-Stack", count: 2 },
 ];
 
 
