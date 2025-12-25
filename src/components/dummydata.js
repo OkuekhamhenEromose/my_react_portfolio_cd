@@ -16,15 +16,15 @@ import image4 from "../img/testimonials/samuelokpe.jpeg";
 import image5 from "../img/testimonials/michaelojemoron.jpeg";
 import image6 from "../img/testimonials/nathanielnosa.jpeg";
 
-import Image2 from "../img/portfolio/insomnia1.png";
-import Image7 from "../img/portfolio/portfolio.png";
-import Image3 from "../img/portfolio/chtravels.png";
-import Image4 from "../img/portfolio/realestate-img.png";
-import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
+// import Image2 from "../img/portfolio/insomnia1.png";
+// import Image7 from "../img/portfolio/portfolio.png";
+// import Image3 from "../img/portfolio/chtravels.png";
+// import Image4 from "../img/portfolio/realestate-img.png";
+// import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
 
-import Image6 from "../img/portfolio/resumebuilder.png";
-import Image1 from "../img/portfolio/ethahospital.png"
-import Image9 from "../img/portfolio/nextportfolio.png"
+// import Image6 from "../img/portfolio/resumebuilder.png";
+// import Image1 from "../img/portfolio/ethahospital.png"
+// import Image9 from "../img/portfolio/nextportfolio.png"
 
 // Stats Project Data
 export const project = [
@@ -163,7 +163,7 @@ export const portfolioProjects = [
     title: "Listings App (Backend)",
     description: "A backend-driven property listings API built with Django and Django REST Framework. Supports property creation, categorization, search, filtering, and structured REST endpoints for frontend consumption.",
     category: "Backend",
-    image: Image2,
+    image: "/portfolio/insomnia1.png",
     demoLink: "https://housing-properties.onrender.com",
     githubLink: "https://github.com/OkuekhamhenEromose/housing_properties",
   },
@@ -172,7 +172,7 @@ export const portfolioProjects = [
     title: "Real Estate Website",
     description: "A responsive real estate frontend application for showcasing properties for sale and rent. Built with HTML, CSS, and JavaScript, featuring property cards, clean layouts, and user-friendly navigation.",
     category: "Frontend",
-    image: Image4,
+    image: "/portfolio/realestate-img.png",
     demoLink: "https://dancing-youtiao-914380.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/RealEstateModern",
   },
@@ -181,7 +181,7 @@ export const portfolioProjects = [
     title: "EthaHospital App",
     description: "Etta-Atlantic Memorial Hospital clone mimicking the great hospital website in design and animation.",
     category: "Frontend",
-    image: Image1,
+    image: "/portfolio/ethahospital.png",
     demoLink: "https://ettahospitalclone.vercel.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact",
   },
@@ -190,7 +190,7 @@ export const portfolioProjects = [
     title: "CH-Travels",
     description: "A modern travel agency website built with React and Framer Motion. Focused on smooth animations, engaging UI transitions, and a polished user experience for exploring travel destinations.",
     category: "Frontend",
-    image: Image3,
+    image: "/portfolio/chtravels.png",
     demoLink: "https://shiny-scone-6fc98c.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/chardevtravel",
   },
@@ -199,7 +199,7 @@ export const portfolioProjects = [
     title: "Resume Builder",
     description: "Resume generation web app with backend support for user data and storage.",
     category: "Backend",
-    image: Image6,
+    image: "/portfolio/resumebuilder.png",
     demoLink: "https://renewschool-1.onrender.com",
     githubLink: "https://github.com/OkuekhamhenEromose/myresume",
   },
@@ -208,7 +208,7 @@ export const portfolioProjects = [
     title: "CHBlog App",
     description: "A full-stack blogging platform built with React, Tailwind CSS, Django, and Django REST Framework. Implements role-based authentication, protected routes, CRUD operations, and secure API communication.",
     category: "Full-Stack",
-    image: Image5,
+    image: "/portfolio/Screenshot 2025-09-21 164622.png",
     demoLink: "https://subtle-blini-446f27.netlify.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
   },
@@ -217,7 +217,7 @@ export const portfolioProjects = [
     title: "EthaHospital Management System",
     description: "A production-ready full-stack hospital management system built with TypeScript, React, Tailwind CSS, Django, and Django REST Framework. Features role-based authentication, Google OAuth, secure APIs, appointment workflows, and medical record management.",
     category: "Full-Stack",
-    image: Image1,
+    image: "/portfolio/ethahospital.png",
     demoLink: "https://dhospitalback.onrender.com/api/",
     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
   },
@@ -226,7 +226,7 @@ export const portfolioProjects = [
     title: "Portfolio",
     description: "A personal portfolio website built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information with a clean and professional layout.",
     category: "Frontend",
-    image: Image7,
+    image: "/portfolio/portfolio.png",
     demoLink: "https://timely-axolotl-0f4be3.netlify.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
   },
@@ -236,7 +236,7 @@ export const portfolioProjects = [
     description:
       "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
     category: "Frontend",
-    image: Image9,
+    image: "/portfolio/nextportfolio.png",
     demoLink: "#",
     githubLink: "#",
   },
