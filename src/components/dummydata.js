@@ -22,7 +22,7 @@ import Image3 from "../img/portfolio/chtravels.png";
 import Image4 from "../img/portfolio/realestate-img.png";
 import Image5 from "../img/portfolio/Screenshot 2025-09-21 164622.png";
 
-import Image6 from "../img/portfolio/insomnia2.png";
+import Image6 from "../img/portfolio/resumebuilder.png";
 import Image1 from "../img/portfolio/ethahospital.png"
 import Image9 from "../img/portfolio/nextportfolio.png"
 
