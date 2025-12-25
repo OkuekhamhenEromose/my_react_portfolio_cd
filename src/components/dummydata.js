@@ -27,32 +27,32 @@ import image6 from "../img/testimonials/nathanielnosa.jpeg";
 // import Image9 from "../img/img/portfolio/nextportfolio.png"
 
 // Stats Project Data
-// export const project = [
-//   {
-//     id: 1,
-//     icon: <FaHeart className="text-[#003366] text-3xl" />,
-//     num: 65,
-//     title: "HAPPY CLIENTS",
-//   },
-//   {
-//     id: 2,
-//     icon: <FaUser className="text-[#003366] text-3xl" />,
-//     num: 101,
-//     title: "PROJECTS COMPLETED",
-//   },
-//   {
-//     id: 3,
-//     icon: <FaGlobe className="text-[#003366] text-3xl" />,
-//     num: 108,
-//     title: "FILES DOWNLOADED",
-//   },
-//   {
-//     id: 4,
-//     icon: <FaCloud className="text-[#003366] text-3xl" />,
-//     num: 1446,
-//     title: "LINES OF CODE",
-//   },
-// ];
+export const project = [
+  {
+    id: 1,
+    icon: <FaHeart className="text-[#003366] text-3xl" />,
+    num: 65,
+    title: "HAPPY CLIENTS",
+  },
+  {
+    id: 2,
+    icon: <FaUser className="text-[#003366] text-3xl" />,
+    num: 101,
+    title: "PROJECTS COMPLETED",
+  },
+  {
+    id: 3,
+    icon: <FaGlobe className="text-[#003366] text-3xl" />,
+    num: 108,
+    title: "FILES DOWNLOADED",
+  },
+  {
+    id: 4,
+    icon: <FaCloud className="text-[#003366] text-3xl" />,
+    num: 1446,
+    title: "LINES OF CODE",
+  },
+];
 
 // export const portfolioProjects = [
 //   {
