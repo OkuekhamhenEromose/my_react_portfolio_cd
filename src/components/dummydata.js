@@ -27,32 +27,32 @@ import image6 from "../img/testimonials/nathanielnosa.jpeg";
 // import Image9 from "../img/img/portfolio/nextportfolio.png"
 
 // Stats Project Data
-export const project = [
-  {
-    id: 1,
-    icon: <FaHeart className="text-[#003366] text-3xl" />,
-    num: 65,
-    title: "HAPPY CLIENTS",
-  },
-  {
-    id: 2,
-    icon: <FaUser className="text-[#003366] text-3xl" />,
-    num: 101,
-    title: "PROJECTS COMPLETED",
-  },
-  {
-    id: 3,
-    icon: <FaGlobe className="text-[#003366] text-3xl" />,
-    num: 108,
-    title: "FILES DOWNLOADED",
-  },
-  {
-    id: 4,
-    icon: <FaCloud className="text-[#003366] text-3xl" />,
-    num: 1446,
-    title: "LINES OF CODE",
-  },
-];
+// export const project = [
+//   {
+//     id: 1,
+//     icon: <FaHeart className="text-[#003366] text-3xl" />,
+//     num: 65,
+//     title: "HAPPY CLIENTS",
+//   },
+//   {
+//     id: 2,
+//     icon: <FaUser className="text-[#003366] text-3xl" />,
+//     num: 101,
+//     title: "PROJECTS COMPLETED",
+//   },
+//   {
+//     id: 3,
+//     icon: <FaGlobe className="text-[#003366] text-3xl" />,
+//     num: 108,
+//     title: "FILES DOWNLOADED",
+//   },
+//   {
+//     id: 4,
+//     icon: <FaCloud className="text-[#003366] text-3xl" />,
+//     num: 1446,
+//     title: "LINES OF CODE",
+//   },
+// ];
 
 // export const portfolioProjects = [
 //   {
@@ -140,7 +140,7 @@ export const project = [
 //     category: "Frontend",
 //     image: Image7,
 //     demoLink: "https://ettahospitalclone.vercel.app/",
-//     githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact"
+//     githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact",
 //   },
 
 //   {
@@ -162,7 +162,7 @@ export const portfolioProjects = [
     id: 1,
     title: "Listings App (Backend)",
     description:
-      "A backend-driven property listings API built with Django and Django REST Framework.",
+      "A backend-driven property listings API built with Django and Django REST Framework. Supports property creation, categorization, search, filtering, and structured REST endpoints for frontend consumption.",
     category: "Backend",
     image: "/img/portfolio/insomnia1.png",
     demoLink: "https://housing-properties.onrender.com",
@@ -172,7 +172,7 @@ export const portfolioProjects = [
     id: 2,
     title: "Real Estate Website",
     description:
-      "A responsive real estate frontend application built with HTML, CSS, and JavaScript.",
+      "A responsive real estate frontend application for showcasing properties for sale and rent. Built with HTML, CSS, and JavaScript, featuring property cards, clean layouts, and user-friendly navigation.",
     category: "Frontend",
     image: "/img/portfolio/realestate-img.png",
     demoLink: "https://dancing-youtiao-914380.netlify.app",
@@ -182,7 +182,7 @@ export const portfolioProjects = [
     id: 3,
     title: "EthaHospital App",
     description:
-      "Hospital website clone with modern UI and animations.",
+      "A frontend clone of a hospital website built with TypeScript, Tailwind CSS, and Framer Motion. Emphasizes modern UI design, accessibility, and smooth animated interactions.",
     category: "Frontend",
     image: "/img/portfolio/ethahospital.png",
     demoLink: "https://ettahospitalclone.vercel.app/",
@@ -192,7 +192,7 @@ export const portfolioProjects = [
     id: 4,
     title: "CH-Travels",
     description:
-      "Travel agency website built with React and Framer Motion.",
+      "A modern travel agency website built with React and Framer Motion. Focused on smooth animations, engaging UI transitions, and a polished user experience for exploring travel destinations.",
     category: "Frontend",
     image: "/img/portfolio/chtravels.png",
     demoLink: "https://shiny-scone-6fc98c.netlify.app",
@@ -202,7 +202,7 @@ export const portfolioProjects = [
     id: 5,
     title: "Resume Builder",
     description:
-      "Resume generation web app with backend support.",
+      "A Python and Django REST Framework–powered resume builder that exposes secure APIs to generate structured, professional resumes from user input.",
     category: "Backend",
     image: "/img/portfolio/resumebuilder.png",
     demoLink: "https://renewschool-1.onrender.com",
@@ -212,7 +212,7 @@ export const portfolioProjects = [
     id: 6,
     title: "CHBlog App",
     description:
-      "Full-stack blogging platform with role-based authentication.",
+      "A full-stack blogging platform built with React, Tailwind CSS, Django, and Django REST Framework. Implements role-based authentication, protected routes, CRUD operations, and secure API communication.",
     category: "Full-Stack",
     image: "/img/portfolio/chblog.png",
     demoLink: "https://subtle-blini-446f27.netlify.app/",
@@ -232,7 +232,7 @@ export const portfolioProjects = [
     id: 8,
     title: "Portfolio",
     description:
-      "Personal portfolio website built with HTML, CSS, and JavaScript.",
+      "A personal portfolio website built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information with a clean and professional layout.",
     category: "Frontend",
     image: "/img/portfolio/portfolio.png",
     demoLink: "https://timely-axolotl-0f4be3.netlify.app/",
@@ -242,7 +242,7 @@ export const portfolioProjects = [
     id: 9,
     title: "Advanced Portfolio",
     description:
-      "Next.js portfolio with Framer Motion and SEO optimization.",
+      "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
     category: "Frontend",
     image: "/img/portfolio/nextportfolio.png",
     demoLink: "#",
