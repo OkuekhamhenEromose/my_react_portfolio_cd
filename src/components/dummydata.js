@@ -161,7 +161,8 @@ export const portfolioProjects = [
   {
     id: 1,
     title: "Listings App (Backend)",
-    description: "A backend-driven property listings API built with Django and Django REST Framework. Supports property creation, categorization, search, filtering, and structured REST endpoints for frontend consumption.",
+    description:
+      "A backend-driven property listings API built with Django and Django REST Framework.",
     category: "Backend",
     image: "/img/portfolio/insomnia1.png",
     demoLink: "https://housing-properties.onrender.com",
@@ -170,7 +171,8 @@ export const portfolioProjects = [
   {
     id: 2,
     title: "Real Estate Website",
-    description: "A responsive real estate frontend application for showcasing properties for sale and rent. Built with HTML, CSS, and JavaScript, featuring property cards, clean layouts, and user-friendly navigation.",
+    description:
+      "A responsive real estate frontend application built with HTML, CSS, and JavaScript.",
     category: "Frontend",
     image: "/img/portfolio/realestate-img.png",
     demoLink: "https://dancing-youtiao-914380.netlify.app",
@@ -179,7 +181,8 @@ export const portfolioProjects = [
   {
     id: 3,
     title: "EthaHospital App",
-    description: "Etta-Atlantic Memorial Hospital clone mimicking the great hospital website in design and animation.",
+    description:
+      "Hospital website clone with modern UI and animations.",
     category: "Frontend",
     image: "/img/portfolio/ethahospital.png",
     demoLink: "https://ettahospitalclone.vercel.app/",
@@ -188,7 +191,8 @@ export const portfolioProjects = [
   {
     id: 4,
     title: "CH-Travels",
-    description: "A modern travel agency website built with React and Framer Motion. Focused on smooth animations, engaging UI transitions, and a polished user experience for exploring travel destinations.",
+    description:
+      "Travel agency website built with React and Framer Motion.",
     category: "Frontend",
     image: "/img/portfolio/chtravels.png",
     demoLink: "https://shiny-scone-6fc98c.netlify.app",
@@ -197,7 +201,8 @@ export const portfolioProjects = [
   {
     id: 5,
     title: "Resume Builder",
-    description: "Resume generation web app with backend support for user data and storage.",
+    description:
+      "Resume generation web app with backend support.",
     category: "Backend",
     image: "/img/portfolio/resumebuilder.png",
     demoLink: "https://renewschool-1.onrender.com",
@@ -206,16 +211,18 @@ export const portfolioProjects = [
   {
     id: 6,
     title: "CHBlog App",
-    description: "A full-stack blogging platform built with React, Tailwind CSS, Django, and Django REST Framework. Implements role-based authentication, protected routes, CRUD operations, and secure API communication.",
+    description:
+      "Full-stack blogging platform with role-based authentication.",
     category: "Full-Stack",
-    image: "/img/portfolio/Screenshot 2025-09-21 164622.png",
+    image: "/img/portfolio/chblog.png",
     demoLink: "https://subtle-blini-446f27.netlify.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
   },
   {
     id: 7,
     title: "EthaHospital Management System",
-    description: "A production-ready full-stack hospital management system built with TypeScript, React, Tailwind CSS, Django, and Django REST Framework. Features role-based authentication, Google OAuth, secure APIs, appointment workflows, and medical record management.",
+    description:
+      "Production-ready hospital management system with Google OAuth.",
     category: "Full-Stack",
     image: "/img/portfolio/ethahospital.png",
     demoLink: "https://dhospitalback.onrender.com/api/",
@@ -224,23 +231,25 @@ export const portfolioProjects = [
   {
     id: 8,
     title: "Portfolio",
-    description: "A personal portfolio website built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information with a clean and professional layout.",
+    description:
+      "Personal portfolio website built with HTML, CSS, and JavaScript.",
     category: "Frontend",
     image: "/img/portfolio/portfolio.png",
     demoLink: "https://timely-axolotl-0f4be3.netlify.app/",
     githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
   },
-    {
+  {
     id: 9,
     title: "Advanced Portfolio",
     description:
-      "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
+      "Next.js portfolio with Framer Motion and SEO optimization.",
     category: "Frontend",
     image: "/img/portfolio/nextportfolio.png",
     demoLink: "#",
     githubLink: "#",
   },
 ];
+
 
 // ✅ Categories aligned with "category" field above
 export const projectCategories = [
