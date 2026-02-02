@@ -5,11 +5,6 @@ import { motion } from "framer-motion";
 import Skills from "../components/Skills";
 import { portfolioProjects, projectCategories } from "../components/dummydata";
 
-// Animations (same as before)
-const fadeInDown = {
-  hidden: { opacity: 0, y: -30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
 const fadeInLeft = {
   hidden: { opacity: 0, x: -50 },
   visible: {
