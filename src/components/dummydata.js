@@ -134,7 +134,7 @@ export const portfolioProjects = [
       "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
     category: "Frontend",
     image: "/img/portfolio/nextportfolio.png",
-    demoLink: "charleseromose.netlify.app",
+    demoLink: "https://charleseromose.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/nextportfoliooriginal",
   },
 ];
