@@ -16,16 +16,6 @@ import image4 from "../img/testimonials/samuelokpe.jpeg";
 import image5 from "../img/testimonials/michaelojemoron.jpeg";
 import image6 from "../img/testimonials/nathanielnosa.jpeg";
 
-// import Image2 from "../img/img/portfolio/insomnia1.png";
-// import Image7 from "../img/img/portfolio/portfolio.png";
-// import Image3 from "../img/img/portfolio/chtravels.png";
-// import Image4 from "../img/img/portfolio/realestate-img.png";
-// import Image5 from "../img/img/portfolio/Screenshot 2025-09-21 164622.png";
-
-// import Image6 from "../img/img/portfolio/resumebuilder.png";
-// import Image1 from "../img/img/portfolio/ethahospital.png"
-// import Image9 from "../img/img/portfolio/nextportfolio.png"
-
 // Stats Project Data
 export const project = [
   {
@@ -53,107 +43,6 @@ export const project = [
     title: "LINES OF CODE",
   },
 ];
-
-// export const portfolioProjects = [
-//   {
-//     id: 1,
-//     title: "Listings App (Backend)",
-//     description:
-//       "A backend-driven property listings API built with Django and Django REST Framework. Supports property creation, categorization, search, filtering, and structured REST endpoints for frontend consumption.",
-//     category: "Backend",
-//     image: Image2,
-//     demoLink: "https://housing-properties.onrender.com",
-//     githubLink: "https://github.com/OkuekhamhenEromose/housing_properties",
-//   },
-
-//   {
-//     id: 2,
-//     title: "Real Estate Website",
-//     description:
-//       "A responsive real estate frontend application for showcasing properties for sale and rent. Built with HTML, CSS, and JavaScript, featuring property cards, clean layouts, and user-friendly navigation.",
-//     category: "Frontend",
-//     image: Image4,
-//     demoLink: "https://dancing-youtiao-914380.netlify.app",
-//     githubLink: "https://github.com/OkuekhamhenEromose/RealEstateModern",
-//   },
-
-//   {
-//     id: 3,
-//     title: "CH Travels",
-//     description:
-//       "A modern travel agency website built with React and Framer Motion. Focused on smooth animations, engaging UI transitions, and a polished user experience for exploring travel destinations.",
-//     category: "Frontend",
-//     image: Image3,
-//     demoLink: "https://shiny-scone-6fc98c.netlify.app",
-//     githubLink: "https://github.com/OkuekhamhenEromose/chardevtravel",
-//   },
-
-//   {
-//     id: 4,
-//     title: "CH Blog (Frontend)",
-//     description:
-//       "A modern blog frontend built with React and Tailwind CSS. Features a clean reading experience, responsive layouts, reusable components, and optimized styling for content-driven applications.",
-//     category: "Frontend",
-//     image: Image5,
-//     demoLink: "https://subtle-blini-446f27.netlify.app/",
-//     githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
-//   },
-
-//   {
-//     id: 5,
-//     title: "CH Blog (Full Stack)",
-//     description:
-//       "A full-stack blogging platform built with React, Tailwind CSS, Django, and Django REST Framework. Implements role-based authentication, protected routes, CRUD operations, and secure API communication.",
-//     category: "Full-Stack",
-//     image: Image6,
-//     demoLink: "https://subtle-blini-446f27.netlify.app/",
-//     githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
-//   },
-
-//   {
-//     id: 6,
-//     title: "Portfolio Website",
-//     description:
-//       "A personal portfolio website built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information with a clean and professional layout.",
-//     category: "Frontend",
-//     image: Image7,
-//     demoLink: "https://timely-axolotl-0f4be3.netlify.app/",
-//     githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
-//   },
-
-//   {
-//     id: 7,
-//     title: "Advanced Portfolio",
-//     description:
-//       "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
-//     category: "Frontend",
-//     image: Image7,
-//     demoLink: "#",
-//     githubLink: "#",
-//   },
-
-//   {
-//     id: 8,
-//     title: "Etha Hospital Clone (Frontend)",
-//     description:
-//       "A frontend clone of a hospital website built with TypeScript, Tailwind CSS, and Framer Motion. Emphasizes modern UI design, accessibility, and smooth animated interactions.",
-//     category: "Frontend",
-//     image: Image7,
-//     demoLink: "https://ettahospitalclone.vercel.app/",
-//     githubLink: "https://github.com/OkuekhamhenEromose/hospitaltypescriptreact",
-//   },
-
-//   {
-//     id: 9,
-//     title: "Etha Hospital Management System (Full Stack)",
-//     description:
-//       "A production-ready full-stack hospital management system built with TypeScript, React, Tailwind CSS, Django, and Django REST Framework. Features role-based authentication, Google OAuth, secure APIs, appointment workflows, and medical record management.",
-//     category: "Full-Stack",
-//     image: Image1,
-//     demoLink: "https://dhospitalback.onrender.com/api/",
-//     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
-//   },
-// ];
 
 
 // Portfolio Projects (Detailed)
@@ -215,8 +104,8 @@ export const portfolioProjects = [
       "A full-stack blogging platform built with React, Tailwind CSS, Django, and Django REST Framework. Implements role-based authentication, protected routes, CRUD operations, and secure API communication.",
     category: "Full-Stack",
     image: "/img/portfolio/chblog.png",
-    demoLink: "https://subtle-blini-446f27.netlify.app/",
-    githubLink: "https://github.com/OkuekhamhenEromose/blogfrontcd",
+    demoLink: "https://multiblogapp.netlify.app/blog",
+    githubLink: "https://github.com/ehihameneromosele/fullblogc",
   },
   {
     id: 7,
@@ -245,8 +134,8 @@ export const portfolioProjects = [
       "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
     category: "Frontend",
     image: "/img/portfolio/nextportfolio.png",
-    demoLink: "#",
-    githubLink: "#",
+    demoLink: "charleseromose.netlify.app",
+    githubLink: "https://github.com/OkuekhamhenEromose/nextportfoliooriginal",
   },
 ];
 
