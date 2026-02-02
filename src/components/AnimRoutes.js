@@ -6,7 +6,7 @@ import Services from '../pages/Services';
 import Testimonials from '../pages/Testimonials';
 import Contact from '../pages/Contact';
 
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 const AnimRoutes = () => {
   return (
     <Routes>
