@@ -165,7 +165,7 @@ export const projectCategories = [
   { id: "all", name: "All Projects", count: 9 },
   { id: "Frontend", name: "Frontend", count: 5 },
   { id: "Backend", name: "Backend", count: 2 },
-  { id: "Full-Stack", name: "Full-Stack", count: 2 },
+  { id: "Full-Stack", name: "Full-Stack", count: 4 },
 ];
 
 
