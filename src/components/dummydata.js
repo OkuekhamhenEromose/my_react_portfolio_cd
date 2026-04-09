@@ -1,13 +1,12 @@
-import { FaHeart, FaGlobe, FaUser } from 'react-icons/fa';
-import { 
-  FaPalette,  
-  FaMobile, 
-  FaServer, 
-  FaCloud, 
-  FaCode,  
+import { FaHeart, FaGlobe, FaUser } from "react-icons/fa";
+import {
+  FaPalette,
+  FaMobile,
+  FaServer,
+  FaCloud,
+  FaCode,
   FaDatabase,
-} from 'react-icons/fa';
-
+} from "react-icons/fa";
 
 import image1 from "../img/testimonials/brightnwachukwu.jpeg";
 import image2 from "../img/testimonials/enoch olisa.jpeg";
@@ -44,28 +43,27 @@ export const project = [
   },
 ];
 
-
 // Portfolio Projects (Detailed)
 export const portfolioProjects = [
   {
     id: 1,
-    title: "Listings App (Backend)",
+    title: "Shopa — E-Commerce Marketplace",
     description:
-      "A backend-driven property listings API built with Django and Django REST Framework. Supports property creation, categorization, search, filtering, and structured REST endpoints for frontend consumption.",
-    category: "Backend",
-    image: "/img/portfolio/insomnia1.png",
-    demoLink: "https://housing-properties.onrender.com",
-    githubLink: "https://github.com/OkuekhamhenEromose/housing_properties",
+      "A scalable multi-vendor marketplace built with Next.js and Django, featuring secure Paystack payments, Redis-powered performance optimisation, and a production-grade checkout system.",
+    category: "Full-Stack",
+    image: "/img/portfolio/shopa.png",
+    demoLink: "https://retsyapp.vercel.app/",
+    githubLink: "https://github.com/OkuekhamhenEromose/retsyapp",
   },
   {
     id: 2,
-    title: "Real Estate Website",
+    title: "Trellify — Trello Clone",
     description:
-      "A responsive real estate frontend application for showcasing properties for sale and rent. Built with HTML, CSS, and JavaScript, featuring property cards, clean layouts, and user-friendly navigation.",
-    category: "Frontend",
-    image: "/img/portfolio/realestate-img.png",
-    demoLink: "https://dancing-youtiao-914380.netlify.app",
-    githubLink: "https://github.com/OkuekhamhenEromose/RealEstateModern",
+      "A real-time collaborative Kanban app built with the MERN stack, featuring Socket.io live updates, advanced JWT + OTP authentication, and a pixel-perfect Trello-like UI.",
+    category: "Full-Stack",
+    image: "/img/portfolio/trellify.png",
+    demoLink: "https://trello-next-blush.vercel.app/",
+    githubLink: "https://github.com/OkuekhamhenEromose/trello-next",
   },
   {
     id: 3,
@@ -89,16 +87,6 @@ export const portfolioProjects = [
   },
   {
     id: 5,
-    title: "Resume Builder",
-    description:
-      "A Python and Django REST Framework–powered resume builder that exposes secure APIs to generate structured, professional resumes from user input.",
-    category: "Backend",
-    image: "/img/portfolio/resumebuilder.png",
-    demoLink: "https://renewschool-1.onrender.com",
-    githubLink: "https://github.com/OkuekhamhenEromose/myresume",
-  },
-  {
-    id: 6,
     title: "CHBlog App",
     description:
       "A full-stack blogging platform built with React, Tailwind CSS, Django, and Django REST Framework. Implements role-based authentication, protected routes, CRUD operations, and secure API communication.",
@@ -108,7 +96,39 @@ export const portfolioProjects = [
     githubLink: "https://github.com/ehihameneromosele/fullblogc",
   },
   {
+    id: 6,
+    title: "Listings App (Backend)",
+    description:
+      "A backend-driven property listings API built with Django and Django REST Framework. Supports property creation, categorization, search, filtering, and structured REST endpoints for frontend consumption.",
+    category: "Backend",
+    image: "/img/portfolio/insomnia1.png",
+    demoLink: "https://housing-properties.onrender.com",
+    githubLink: "https://github.com/OkuekhamhenEromose/housing_properties",
+  },
+  {
     id: 7,
+    title: "Real Estate Website",
+    description:
+      "A responsive real estate frontend application for showcasing properties for sale and rent. Built with HTML, CSS, and JavaScript, featuring property cards, clean layouts, and user-friendly navigation.",
+    category: "Frontend",
+    image: "/img/portfolio/realestate-img.png",
+    demoLink: "https://dancing-youtiao-914380.netlify.app",
+    githubLink: "https://github.com/OkuekhamhenEromose/RealEstateModern",
+  },
+  
+  {
+    id: 8,
+    title: "Resume Builder",
+    description:
+      "A Python and Django REST Framework–powered resume builder that exposes secure APIs to generate structured, professional resumes from user input.",
+    category: "Backend",
+    image: "/img/portfolio/resumebuilder.png",
+    demoLink: "https://renewschool-1.onrender.com",
+    githubLink: "https://github.com/OkuekhamhenEromose/myresume",
+  },
+  
+  {
+    id: 9,
     title: "EthaHospital Management System",
     description:
       "Production-ready hospital management system with Google OAuth.",
@@ -118,7 +138,7 @@ export const portfolioProjects = [
     githubLink: "https://github.com/OkuekhamhenEromose/dhospitalback",
   },
   {
-    id: 8,
+    id: 10,
     title: "Portfolio",
     description:
       "A personal portfolio website built with HTML, CSS, and JavaScript to showcase projects, skills, and contact information with a clean and professional layout.",
@@ -128,7 +148,7 @@ export const portfolioProjects = [
     githubLink: "https://github.com/OkuekhamhenEromose/portfolio-original",
   },
   {
-    id: 9,
+    id: 11,
     title: "Advanced Portfolio",
     description:
       "A next-generation portfolio built with Next.js and Framer Motion, focusing on performance, smooth animations, SEO optimization, and a modern developer-focused presentation.",
@@ -136,29 +156,8 @@ export const portfolioProjects = [
     image: "/img/portfolio/nextportfolio.png",
     demoLink: "https://charleseromose.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/nextportfoliooriginal",
-  },
-  {
-  id: 10,
-  title: "Shopa — E-Commerce Marketplace",
-  description:
-    "A scalable multi-vendor marketplace built with Next.js and Django, featuring secure Paystack payments, Redis-powered performance optimisation, and a production-grade checkout system.",
-  category: "Full-Stack",
-  image: "/img/portfolio/shopa.png",
-  demoLink: "https://retsyapp.vercel.app/",
-  githubLink: "https://github.com/OkuekhamhenEromose/retsyapp",
-},
-{
-  id: 11,
-  title: "Trellify — Trello Clone",
-  description:
-    "A real-time collaborative Kanban app built with the MERN stack, featuring Socket.io live updates, advanced JWT + OTP authentication, and a pixel-perfect Trello-like UI.",
-  category: "Full-Stack",
-  image: "/img/portfolio/trellify.png",
-  demoLink: "https://trello-next-blush.vercel.app/",
-  githubLink: "https://github.com/OkuekhamhenEromose/trello-next",
-}
+  }
 ];
-
 
 // ✅ Categories aligned with "category" field above
 export const projectCategories = [
@@ -167,7 +166,6 @@ export const projectCategories = [
   { id: "Backend", name: "Backend", count: 2 },
   { id: "Full-Stack", name: "Full-Stack", count: 4 },
 ];
-
 
 // Statistics
 export const statistics = [
@@ -179,41 +177,41 @@ export const statistics = [
 
 // Services
 export const services = [
-  { 
-    id: 1, 
-    icon: FaPalette, 
-    title: "UI/UX & Creative Design", 
-    desc: "Intuitive, user-centered interfaces that combine aesthetics with functionality to engage and convert users." 
+  {
+    id: 1,
+    icon: FaPalette,
+    title: "UI/UX & Creative Design",
+    desc: "Intuitive, user-centered interfaces that combine aesthetics with functionality to engage and convert users.",
   },
-  { 
-    id: 2, 
-    icon: FaCode, 
-    title: "Full-Stack Development", 
-    desc: "End-to-end development from responsive frontends to powerful backends, APIs, and databases for robust web applications." 
+  {
+    id: 2,
+    icon: FaCode,
+    title: "Full-Stack Development",
+    desc: "End-to-end development from responsive frontends to powerful backends, APIs, and databases for robust web applications.",
   },
-  { 
-    id: 3, 
-    icon: FaMobile, 
-    title: "Responsive & Cross-Device Apps", 
-    desc: "Websites and apps that adapt seamlessly across devices, ensuring consistent speed and performance everywhere." 
+  {
+    id: 3,
+    icon: FaMobile,
+    title: "Responsive & Cross-Device Apps",
+    desc: "Websites and apps that adapt seamlessly across devices, ensuring consistent speed and performance everywhere.",
   },
-  { 
-    id: 4, 
-    icon: FaServer, 
-    title: "Scalable Architecture", 
-    desc: "Designing and deploying systems that scale efficiently, handle traffic growth, and maintain performance under load." 
+  {
+    id: 4,
+    icon: FaServer,
+    title: "Scalable Architecture",
+    desc: "Designing and deploying systems that scale efficiently, handle traffic growth, and maintain performance under load.",
   },
-  { 
-    id: 5, 
-    icon: FaCloud, 
-    title: "Cloud & DevOps (AWS/Docker)", 
-    desc: "Deployment and management on AWS cloud, containerization with Docker, and CI/CD pipelines for faster, reliable delivery." 
+  {
+    id: 5,
+    icon: FaCloud,
+    title: "Cloud & DevOps (AWS/Docker)",
+    desc: "Deployment and management on AWS cloud, containerization with Docker, and CI/CD pipelines for faster, reliable delivery.",
   },
-  { 
-    id: 6, 
-    icon: FaDatabase, 
-    title: "Database Management", 
-    desc: "Designing, optimizing, and maintaining SQL/NoSQL databases to ensure secure, efficient, and scalable data handling." 
+  {
+    id: 6,
+    icon: FaDatabase,
+    title: "Database Management",
+    desc: "Designing, optimizing, and maintaining SQL/NoSQL databases to ensure secure, efficient, and scalable data handling.",
   },
 ];
 
@@ -243,7 +241,8 @@ export const home = [
 export const about = [
   {
     desc: "With over 3 years of experience in web development, I specialize in creating scalable and efficient solutions. My expertise spans across frontend and backend technologies, ensuring seamless user experiences.",
-    desc1: "I'm committed to writing clean, maintainable code and staying updated with the latest industry trends to deliver exceptional results for every project.",
+    desc1:
+      "I'm committed to writing clean, maintainable code and staying updated with the latest industry trends to deliver exceptional results for every project.",
     cover: "./images/man.png",
   },
 ];
