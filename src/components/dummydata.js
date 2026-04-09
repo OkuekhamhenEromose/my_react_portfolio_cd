@@ -137,6 +137,26 @@ export const portfolioProjects = [
     demoLink: "https://charleseromose.netlify.app",
     githubLink: "https://github.com/OkuekhamhenEromose/nextportfoliooriginal",
   },
+  {
+  id: 10,
+  title: "Shopa — E-Commerce Marketplace",
+  description:
+    "A scalable multi-vendor marketplace built with Next.js and Django, featuring secure Paystack payments, Redis-powered performance optimisation, and a production-grade checkout system.",
+  category: "Full-Stack",
+  image: "/img/portfolio/shopa.png",
+  demoLink: "https://retsyapp.vercel.app/",
+  githubLink: "https://github.com/OkuekhamhenEromose/retsyapp",
+},
+{
+  id: 11,
+  title: "Trellify — Trello Clone",
+  description:
+    "A real-time collaborative Kanban app built with the MERN stack, featuring Socket.io live updates, advanced JWT + OTP authentication, and a pixel-perfect Trello-like UI.",
+  category: "Full-Stack",
+  image: "/img/portfolio/trellify.png",
+  demoLink: "https://trello-next-blush.vercel.app/",
+  githubLink: "https://github.com/OkuekhamhenEromose/trello-next",
+}
 ];
 
 
